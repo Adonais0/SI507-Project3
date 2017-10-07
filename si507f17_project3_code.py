@@ -115,16 +115,10 @@ ca_data = Cache_url("california",url_ca)
 
 # And then, write each set of data to a file so this won't have to run again.
 
-
-
-
-
-
-
 ######### PART 2 #########
 #create a nationalsite class
 ## Before truly embarking on Part 2, we recommend you do a few things:
-
+print(10*"*"+"Part_2"+10*"*")
 # - Create BeautifulSoup objects out of all the data you have access to in variables from Part 1
 # - Do some investigation on those BeautifulSoup objects. What data do you have about each state? How is it organized in HTML?
 ar_soup = BeautifulSoup(ar_data,'html.parser')
@@ -137,11 +131,9 @@ ca_soup = BeautifulSoup(ca_data,'html.parser')
 ar_ul = ar_soup.find('ul',{'id':'list_parks'})
 ar_park_list = ar_ul.find_all('li')
 p_list = []
-div_list = ar_soup.find_all('div',{'class':'stateListLinks'})
+
 #print(div_list)
-basic_info_link_list = []
-for div in div_list:
-    basic_info_link_list.append((((div.find('ul')).find_all('li'))[1]).find('a').get('href'))
+
 #print(ar_park_list[0].find('h4').text)#link to the basic information
 def get_url_data(url,index):
     try:
@@ -152,70 +144,84 @@ def get_url_data(url,index):
         f.write(data)
         f.close()
     return data
-index = 0
-list_of_address = []
-for link in basic_info_link_list:
-    data = get_url_data(link,index)#basic information html data
-    address_soup = BeautifulSoup(data,'html.parser')
-    index = index + 1
-    list_of_address.append((address_soup.find('span',{'itemprop':'streetAddress'}).text)+'/'+(address_soup.find('span',{'itemprop':'addressLocality'}).text)+'/'+(address_soup.find('span',{'itemprop':'addressRegion'}).text)+'/'+(address_soup.find('span',{'itemprop':'postalCode'}).text))
-print(list_of_address)
-for li in ar_park_list:
-    i = 0
-    if li.find('h4'):
-        print(li.find('h4').text)
-        p_dict = {
-            'location' : li.find('h4').text,
-            'name': (li.find('h3')).find('a').text,
-            'park_type': li.find('h2').text,
-            'description': li.find('p').text,
-            'mail_address':list_of_address[i],
-        }
-        p_list.append(p_dict)
-        i = i+1
-    else:
-        li = None
-        i = i+1
-#print(p_list)
+def return_list_address(soup):#input is a state soup object and return the list of mailing address(string) of that state
+    div_list = soup.find_all('div',{'class':'stateListLinks'})
+    basic_info_link_list = []
+    for div in div_list:
+        basic_info_link_list.append((((div.find('ul')).find_all('li'))[1]).find('a').get('href'))
+    index = 0
+    list_of_address = []
+    for link in basic_info_link_list:
+        data = get_url_data(link,index)#basic information html data
+        address_soup = BeautifulSoup(data,'html.parser')
+        index = index + 1
+        list_of_address.append((address_soup.find('span',{'itemprop':'streetAddress'}).text)[2:-2]+'/'+(address_soup.find('span',{'itemprop':'addressLocality'}).text)+'/'+(address_soup.find('span',{'itemprop':'addressRegion'}).text)+'/'+(address_soup.find('span',{'itemprop':'postalCode'}).text))
+    #print(list_of_address)
+    return list_of_address
+return_list_address(mi_soup)
 
-# def return_park_list(soup):
-#     park_list = []
-#     ul = soup.find('ul',{'id':'list_parks'})
-#     pa_list = ul.find_all('li')
-#     for li in pa_list:
-#         if li.find('h4'):
-#             park_dict = {
-#                 'location': li.find('h4').text,
-#                 'name': (li.find('h3')).find('a').text,
-#                 'park_type': li.find('h2').text,
-#                 'description': li.find('p').text,
-#                 ''
-#             }#col-md-12 col-sm-12  noPadding stateListLinks
-#             #col-md-12 col-sm-12  noPadding stateListLinks
-#             park_list.append(park_dict)
-#         else:
-#             li = None
-#     return park_list
-# print(return_park_list(ar_soup))#list of dictionaries
+# for li in ar_park_list:
+#     i = 0
+#     if li.find('h4'):
+#         print(li.find('h4').text)
+#         p_dict = {
+#             'location' : li.find('h4').text,
+#             'name': (li.find('h3')).find('a').text,
+#             'park_type': li.find('h2').text,
+#             'description': li.find('p').text,
+#             'mail_address':return_list_address(ar_soup)[i],
+#         }
+#         p_list.append(p_dict)
+#         i = i+1
+#     else:
+#         li = None
+#         i = i+1
+# #print(p_list)
+
+def return_park_list(soup):#input a state soup, return a list of park information dictionaries
+    park_list = []
+    ul = soup.find('ul',{'id':'list_parks'})
+    pa_list = ul.find_all('li')
+    for li in pa_list:
+        i = 0
+        if li.find('h4'):
+            park_dict = {
+                'location': li.find('h4').text,
+                'name': (li.find('h3')).find('a').text,
+                'park_type': li.find('h2').text,
+                'description': li.find('p').text,
+                'mail_address':return_list_address(soup)[i],
+            }
+            park_list.append(park_dict)
+            i = i+1
+        else:
+            li = None
+            i = i+1
+    return park_list
+
+#print(return_park_list(ar_soup))#list of dictionaries
 # We have provided, in sample_html_of_park.html an HTML file that represents the HTML about 1 park. However, your code should rely upon HTML data about Michigan, Arkansas, and Califoria you saved and accessed in Part 1.
 
 # However, to begin your investigation and begin to plan your class definition, you may want to open this file and create a BeautifulSoup instance of it to do investigation on.
 
 # Remember that there are things you'll have to be careful about listed in the instructions -- e.g. if no type of park/site/monument is listed in input, one of your instance variables should have a None value...
 #One park object
-# class NationalSite():
-#     def __init__(self,park_dict):#take a dict as input
-#         location = park_dict['location']
-#         name = park_dict['name']
-#         park_type = park_dict['park_type']
-#         description = park_dict['description']
-#     def __str__(self):
-#         print(self.name+" | "+self.location)
-#     def get_mailing_address(self):
+class NationalSite:
+    def __init__(self,park_dict):#take a dict as input
+        self.location = park_dict['location']
+        self.name = park_dict['name']
+        self.park_type = park_dict['park_type']
+        self.description = park_dict['description']
+        self.address = park_dict['mail_address']
+    def __str__(self):
+        return str(self.name+" | "+self.location)
+    def get_mailing_address(self):
+        return park_dict['mail_address']
+    def __contain__(self,item):
+        return item in self.name
 
-
-
-
+inst = NationalSite(return_park_list(ar_soup)[0])#format to use NationalSite
+print(inst)
 
 
 ## Define your class NationalSite here:
@@ -225,7 +231,7 @@ for li in ar_park_list:
 
 
 ## Recommendation: to test the class, at various points, uncomment the following code and invoke some of the methods / check out the instance variables of the test instance saved in the variable sample_inst:
-
+#
 # f = open("sample_html_of_park.html",'r')
 # soup_park_inst = BeautifulSoup(f.read(), 'html.parser') # an example of 1 BeautifulSoup instance to pass into your class
 # sample_inst = NationalSite(soup_park_inst)
@@ -233,28 +239,46 @@ for li in ar_park_list:
 
 
 ######### PART 3 #########
-
+print(10*"*"+"Part_3"+10*"*")
 # Create lists of NationalSite objects for each state's parks.
 
 # HINT: Get a Python list of all the HTML BeautifulSoup instances that represent each park, for each state.
-
-
-
-
+california_natl_sites = []#list of park instances
+arkansas_natl_sites = []
+michigan_natl_sites = []
+for i in return_park_list(ca_soup):#i is a dictionary
+    california_natl_sites.append(NationalSite(i))
+for i in return_park_list(ar_soup):#i is a dictionary
+    arkansas_natl_sites.append(NationalSite(i))
+for i in return_park_list(mi_soup):#i is a dictionary
+    michigan_natl_sites.append(NationalSite(i))
 ##Code to help you test these out:
-# for p in california_natl_sites:
-# 	print(p)
-# for a in arkansas_natl_sites:
-# 	print(a)
-# for m in michigan_natl_sites:
-# 	print(m)
+for p in california_natl_sites:
+	print(p)
+for a in arkansas_natl_sites:
+	print(a)
+for m in michigan_natl_sites:
+	print(m)
 
 
 
 ######### PART 4 #########
-
+print(10*"*"+"Part_4"+10*"*")
 ## Remember the hints / things you learned from Project 2 about writing CSV files from lists of objects!
+outfile = open('arkansas.csv',"w")
+outfile.write("Name, Location, Type, Address, Description\n")
+for park in arkansas_natl_sites:
+    outfile.write('"{}","{}","{}","{}","{}"\n'.format(park.name,park.location,park.park_type,park.address,park.description))
 
+outfile = open('california.csv',"w")
+outfile.write("Name, Location, Type, Address, Description\n")
+for park in california_natl_sites:
+    outfile.write('"{}","{}","{}","{}","{}"\n'.format(park.name,park.location,park.park_type,park.address,park.description))
+
+outfile = open('michigan.csv',"w")
+outfile.write("Name, Location, Type, Address, Description\n")
+for park in michigan_natl_sites:
+    outfile.write('"{}","{}","{}","{}","{}"\n'.format(park.name,park.location,park.park_type,park.address,park.description))
 ## Note that running this step for ALL your data make take a minute or few to run -- so it's a good idea to test any methods/functions you write with just a little bit of data, so running the program will take less time!
 
 ## Also remember that IF you have None values that may occur, you might run into some problems and have to debug for where you need to put in some None value / error handling!
