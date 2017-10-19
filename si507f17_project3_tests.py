@@ -51,7 +51,7 @@ class Part2(unittest.TestCase):
         self.assertTrue("le" in self.sample_inst)
         self.assertTrue("Yosemite" not in self.sample_inst)
 
-class Part3(unittest.TestCase):
+class Part3(unittest.TestCase)
 
     def setUp(self):
         pass
