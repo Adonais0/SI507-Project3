@@ -1,6 +1,6 @@
 <!doctype html> <html lang="en" class="no-js"> <!-- Content Copyright National Park Service -->
-<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Basic Information - Hot Springs National Park (U.S. National Park Service)</title> <script>
-var jsDlgLoader = '/hosp/planyourvisit/loader.cfm';
+<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Basic Information - North Country National Scenic Trail (U.S. National Park Service)</title> <script>
+var jsDlgLoader = '/noco/planyourvisit/loader.cfm';
 var jsSiteResourceLoader = '/cs-resources.cfm?r=';
 var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
@@ -18,16 +18,16 @@ var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 var gMenuControlID = 0;
 var menus_included = 0;
 var jsSiteID = 1;
-var jsSubSiteID = 22013;
-var js_gvPageID = 3428714;
-var jsPageID = 3428714;
+var jsSubSiteID = 22058;
+var js_gvPageID = 3425230;
+var jsPageID = 3425230;
 var jsPageSetID = 0;
 var jsPageType = 0;
 var jsSiteSecurityCreateControls = 0;
 var jsShowRejectForApprover = 1;
 // -->
 </script><script>
-var jsDlgLoader = '/hosp/planyourvisit/loader.cfm';
+var jsDlgLoader = '/noco/planyourvisit/loader.cfm';
 var jsSiteResourceLoader = '/cs-resources.cfm?r=';
 var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
@@ -69,16 +69,161 @@ border-collapse:separate;
 }
 </style>
 <script src='/common/commonspot/templates/js/federated-analytics-uav1.js?ver=true&agency=DOI&subagency=NPS&exts=rtf,odt,ods,odp&dclink=true&enhlink=true' id='_fed_an_ua_tag'></script>
-<meta property="og:title" content="Basic Information - Hot Springs National Park (U.S. National Park Service)" />
+<meta property="og:title" content="Basic Information - North Country National Scenic Trail (U.S. National Park Service)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.nps.gov/hosp/planyourvisit/basicinfo.htm" />
+<meta property="og:url" content="https://www.nps.gov/noco/planyourvisit/basicinfo.htm" />
 <!-- end (5) CustomHead -->
 <!-- beg (6) TertiaryResources -->
 <!-- end (6) TertiaryResources -->
 <!-- beg (7) authormode_inlinestyles -->
 <link rel="stylesheet" type="text/css" href="/commonspot/commonspot.css" id="cs_maincss">
 <!-- end (7) authormode_inlinestyles -->
-</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span>
+</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span><script type="text/javascript">
+<!--
+// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+var bCanRollover=0
+if (bName == "Netscape")
+{
+if(bVer >= 3)
+bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+if(bVer >= 4)
+bCanRollover=1;
+}
+function ImageSet(imgID,newTarget)
+{
+if (bCanRollover)
+document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+window.status = "";
+}
+function setStatbar(statbar)
+{
+// #22793 - no-op because browsers don't honor the assignment
+//	var strStatbar=unescape(statbar);
+//	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+if( menus_included == 1 )
+document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink)
+{
+// links are in one of the following formats:
+// 		cpe_60_0,CP___PAGEID=100
+// 		CPNEWWIN:WindowName^params@CP___
+// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+// displaylink is the server relative URL or fully qualified URL
+windowname = "";
+windowparams = "";
+// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL;
+pos = link.indexOf("CPNEWWIN:");
+if (pos != -1)
+{
+pos1 = link.indexOf ("^");
+windowname = link.substring (pos+9, pos1);
+pos2 = link.indexOf ("@");
+windowparams = link.substring (pos1 + 1, pos2);
+link = link.substring (pos2 + 1, link.length);
+}
+if( displaylink && displaylink != "" )
+{
+if (windowname == "")
+window.location = displaylink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (displaylink, windowname, windowparams);
+}
+}
+else
+{
+targetLink = link;
+if (link.indexOf ("CP___") != -1)
+{
+httpPos = -1;
+commaPos = link.indexOf(",");
+if (commaPos != -1)
+{
+targetUrl = link.substr(commaPos + 1);
+if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+{
+httpPos = commaPos + 1;
+}
+}
+if (httpPos != -1)
+{
+targetLink = link.substr(httpPos);
+commaPos = targetLink.indexOf(",");
+if (commaPos != -1)
+targetLink = targetLink.substr(0, commaPos);
+}
+else
+targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
+if (windowname == "")
+window.location = targetLink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (targetLink, windowname, windowparams);
+}
+}
+else
+{
+//commaPos = link.indexOf(",");
+//if (commaPos != -1)
+//	link = link.substr(0, commaPos);
+if (windowname == "")
+window.location = link;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (link, windowname, windowparams);
+}
+}
+}
+}
+function doWindowOpen(href,name,params)
+{
+if (params != '')
+window.open (href, name, params);
+else
+window.open (href, name);
+}
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+function FormatWindowParams(windowparams)
+{
+if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 ||
+windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+{
+windowparams = substringReplace(windowparams,':left=',',left=');
+windowparams = substringReplace(windowparams,'left=','left=');
+windowparams = substringReplace(windowparams,':ww=',',width=');
+windowparams = substringReplace(windowparams,'ww=','width=');
+windowparams = substringReplace(windowparams,':hh=',',height=');
+windowparams = substringReplace(windowparams,'hh=','height=');
+windowparams = substringReplace(windowparams,':loc=',',location=');
+windowparams = substringReplace(windowparams,'loc=','location=');
+windowparams = substringReplace(windowparams,':dir=',',directories=');
+windowparams = substringReplace(windowparams,'dir=','directories=');
+windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+windowparams = substringReplace(windowparams,'tb=','toolbar=');
+windowparams = substringReplace(windowparams,':stat=',',status=');
+windowparams = substringReplace(windowparams,':mb=',',menubar=');
+windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+windowparams = substringReplace(windowparams,':rs=',',resizable=');
+}
+return windowparams;
+}
+// -->
+</script>
 <!--googleoff: index-->
 <div tabindex="-1" id="beforeSkipLinks"></div>
 <div class="skip-links">
@@ -92,7 +237,7 @@ border-collapse:separate;
 </div>
 <!--googleon: index-->
 <!--googleoff: index-->
-<div class="AnniversaryBanner" id="anniversary_banner" data-sitecode="hosp" data-sitetype="park"></div>
+<div class="AnniversaryBanner" id="anniversary_banner" data-sitecode="noco" data-sitetype="park"></div>
 <div class="PromoBanner"></div>
 <!--googleon: index-->
 <!--googleoff: index-->
@@ -113,7 +258,7 @@ border-collapse:separate;
 <input class="GlobalSearch-input" type="text" autocomplete="off" id="site_search" name="query" placeholder="Keyword Search">
 <button class="GlobalSearch-button GlobalSearch-submitButton btn-form btn-form-primary js-use-site-limit" type="submit">This Site</button>
 <button class="GlobalSearch-button GlobalSearch-secondaryButton btn-form btn-form-primary" type="submit">All NPS</button>
-<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/hosp" />
+<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/noco" />
 <div id="search-suggestions"></div>
 </div>
 <script type="text/template" id="suggestionsTemplate">
@@ -151,7 +296,7 @@ Menu
 </div>
 <nav id="GlobalNav-container" class="row" role="navigation" aria-label="NPS Primary Navigation" aria-labelledby="GlobalNav-toggle" tabindex="-1">
 <ul id="GlobalNav" class="GlobalNav GlobalNav-lvl-1">
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3428714_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3428714|3428714=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425230_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3425230|3425230=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -164,260 +309,131 @@ navTypeTitle = 'Explore This Park';
 <div id="npsNav"><li id="LocalNav-mobile">
 <ul><li class="SectionHeader-green"><h3>Explore This Park</h3></li>
 <li>
-<a href="/hosp/index.htm"> Park Home </a>
+<a href="/noco/index.htm"> Park Home </a>
 </li>
 <li class="has-sub">
-<a href="/hosp/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
+<a href="/noco/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
 <li class="active has-sub">
-<a href="/hosp/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
+<a href="/noco/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
-<a href="/hosp/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
+<a href="/noco/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/fees.htm"> Fees & Passes </a>
+<a href="/noco/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/conditions.htm"> Current Conditions </a>
+<a href="/noco/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/weather.htm"> Weather </a>
+<a href="/noco/planyourvisit/permits-and-reervations.htm"> Permits & Reservations </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/pets.htm"> Pets </a>
+<a href="/noco/planyourvisit/weather.htm"> Weather </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/things2know.htm"> Things to Know Before You Come </a>
+<a href="/noco/planyourvisit/pets.htm"> Pets </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/brochures.htm"> Brochures </a>
+<a href="/noco/planyourvisit/brochures.htm"> Brochures </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
+<a href="/noco/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
 <ul>
 <li>
-<a href="/hosp/planyourvisit/maps.htm"> Maps </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/gettingaround.htm"> Getting Around </a>
+<a href="/noco/planyourvisit/maps.htm"> Maps </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
+<a href="/noco/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
 <ul>
 <li>
-<a href="/hosp/planyourvisit/outdooractivities.htm"> Outdoor Activities </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/indooractivities.htm"> Indoor Activities </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/guidedtours.htm"> Guided Tours </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/campground.htm"> Gulpha Gorge Campground </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/planyourvisit/calendar.htm"> Calendar </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/safety.htm"> Safety </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/accessibility.htm"> Accessibility </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/nearbyattractions.htm"> Nearby Attractions </a>
+<a href="/noco/planyourvisit/national-park-service-passport-stamps.htm"> Passport Stamps </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
-<ul>
-<li class="has-sub">
-<a href="/hosp/learn/news/index.htm" class="has-sub"><span> News </span></a>
+<a href="/noco/planyourvisit/calendar.htm" class="has-sub"><span> Calendar </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/news/newsreleases.htm"> News Releases </a>
+<a href="/noco/planyourvisit/youth_photography.htm"> Youth Nature Photography Exhibit </a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/hosp/learn/photosmultimedia/index.htm"> Photos & Multimedia </a>
+<a href="/noco/planyourvisit/safety.htm"> Safety </a>
 </li>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/index.htm" class="has-sub"><span> History & Culture </span></a>
-<ul>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/people.htm" class="has-sub"><span> People </span></a>
-<ul>
 <li>
-<a href="/hosp/learn/historyculture/oral-history-collection.htm"> Oral History Collection </a>
+<a href="/noco/planyourvisit/accessibility.htm"> Accessibility </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/historyculture/places.htm" class="has-sub"><span> Places </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/historyculture/whittington-park.htm"> Whittington Park </a>
-</li>
-<li>
-<a href="/hosp/learn/historyculture/bathhouse-row.htm"> Bathhouse Row </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/collections.htm" class="has-sub"><span> Collections </span></a>
+<a href="/noco/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
 <ul>
 <li class="has-sub">
-<a href="/hosp/learn/historyculture/archives.htm" class="has-sub"><span> Archives </span></a>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/museum-collections.htm" class="has-sub"><span> Museum Collections </span></a>
-</li>
-<li>
-<a href="/hosp/learn/historyculture/research-library.htm"> Research Library </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/learn/historyculture/research.htm"> Research </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/nature/index.htm" class="has-sub"><span> Nature </span></a>
+<a href="/noco/learn/news/index.htm" class="has-sub"><span> News </span></a>
 <ul>
 <li class="has-sub">
-<a href="/hosp/learn/nature/animals.htm" class="has-sub"><span> Animals </span></a>
+<a href="/noco/learn/news/newsreleases.htm" class="has-sub"><span> News Releases </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/nature/amphibians.htm"> Amphibians </a>
+<a href="/noco/learn/news/newsarchive.htm"> Archive </a>
 </li>
-<li>
-<a href="/hosp/learn/nature/birds.htm"> Birds </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/insects.htm"> Insects, Spiders, Centipedes, Millipedes </a>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/nature/mammals.htm" class="has-sub"><span> Mammals </span></a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/nature/plants.htm" class="has-sub"><span> Plants </span></a>
+<a href="/noco/learn/photosmultimedia/index.htm" class="has-sub"><span> Photos & Multimedia </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/nature/grasses.htm"> Grasses </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/mossesandliverworts.htm"> Mosses and Liverworts </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/treesandshrubs.htm"> Trees and Shrubs </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/learn/nature/environmentalfactors.htm"> Environmental Factors </a>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/nature/naturalfeaturesandecosystems.htm" class="has-sub"><span> Natural Features & Ecosystems </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/nature/hotsprings.htm"> Hot Springs / Geothermal Areas </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/research.htm"> Research </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/inventory-and-monitoring.htm"> Inventory and Monitoring </a>
+<a href="/noco/learn/photosmultimedia/photogallery.htm"> Photo Gallery </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/education/index.htm" class="has-sub"><span> Education </span></a>
+<a href="/noco/learn/management/index.htm" class="has-sub"><span> Management </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/education/planafieldtrip.htm"> Plan A Field Trip </a>
+<a href="/noco/learn/management/staffandoffices.htm"> Our Staff & Offices </a>
 </li>
 <li>
-<a href="/hosp/learn/education/curriculummaterials.htm"> Curriculum Materials </a>
-</li>
-<li>
-<a href="/hosp/learn/education/travellingtrunks.htm"> Traveling Trunks </a>
-</li>
-<li>
-<a href="/hosp/learn/education/suggestedreading.htm"> Suggested Reading </a>
+<a href="/noco/learn/management/lawsandpolicies.htm"> Laws & Policies </a>
 </li>
 </ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/kidsyouth/index.htm" class="has-sub"><span> Kids & Youth </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/kidsyouth/beajuniorranger.htm"> Be A Junior Ranger </a>
-</li>
-<li>
-<a href="/hosp/learn/kidsyouth/junior-trail-ranger.htm"> Junior Trail Ranger </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/management/index.htm" class="has-sub"><span> Management </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/management/staffandoffices.htm"> Our Staff & Offices </a>
-</li>
-<li>
-<a href="/hosp/learn/management/statistics.htm"> Park Statistics </a>
-</li>
-<li>
-<a href="/hosp/learn/management/lawsandpolicies.htm"> Laws & Policies </a>
-</li>
-<li>
-<a href="/hosp/learn/management/firemanagement.htm"> Fire Management </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/getinvolved/supportyourpark/bathhouse-row-emporium.htm"> Bookstore </a>
 </li>
 </ul>
 </li>
 <li class="has-sub last">
-<a href="/hosp/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
+<a href="/noco/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
 <ul>
 <li>
-<a href="/hosp/getinvolved/partners.htm"> Partners </a>
+<a href="/noco/getinvolved/2016.htm"> NPS Centennial </a>
 </li>
 <li>
-<a href="/hosp/getinvolved/donate.htm"> Donate </a>
+<a href="/noco/getinvolved/partners.htm"> Partners </a>
 </li>
 <li>
-<a href="/hosp/getinvolved/volunteer.htm"> Volunteer </a>
+<a href="/noco/getinvolved/volunteer.htm"> Volunteer </a>
 </li>
 <li class="has-sub">
-<a href="/hosp/getinvolved/supportyourpark/index.htm" class="has-sub"><span> Support Your Park </span></a>
+<a href="/noco/getinvolved/planning.htm" class="has-sub"><span> Planning </span></a>
 <ul>
 <li>
-<a href="/hosp/getinvolved/supportyourpark/joinourfriends.htm"> Join Our Friends </a>
+<a href="/noco/learn/management/ncttrailconstructionmanual1.htm"> Handbook for Trail Design, Construction and Maintenance </a>
 </li>
-<li>
-<a href="/hosp/getinvolved/supportyourpark/coopassociation.htm"> Cooperating Association </a>
+</ul>
 </li>
+<li class="has-sub">
+<a href="/noco/getinvolved/supportyourpark/index.htm" class="has-sub"><span> Support Your Park </span></a>
+<ul>
 <li>
-<a href="/hosp/getinvolved/supportyourpark/artist-in-residence-program-information.htm"> Artist-In-Residence Program Information </a>
+<a href="/noco/getinvolved/supportyourpark/coopassociation.htm"> Cooperating Association </a>
 </li>
 </ul>
 </li>
@@ -438,23 +454,23 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3428714_828672">
+<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425230_828672">
 <div id="HERO" class="Hero -secondary">
 <div class="container-fluid">
-<div class="row picturefill-background" style="background-image: url('/common/uploads/banner_image/mwr/secondary/3FA77A7E-1DD8-B71B-0B6388E53AF5DC8C.jpg?width=2400&height=400&mode=crop&quality=90'); background-position: 50% 0%;" role="img" aria-label="Fordyce Bathhouse along bathhouse row. ">
-<span data-src="/common/uploads/banner_image/mwr/secondary/3FA77A7E-1DD8-B71B-0B6388E53AF5DC8C.jpg?width=1200&height=200&mode=crop&quality=90" data-media="(min-width: 1024px)"></span>
-<span data-src="/common/uploads/banner_image/mwr/secondary/3FA77A7E-1DD8-B71B-0B6388E53AF5DC8C.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (min-resolution: 144dppx)"></span>
-<span data-src="/common/uploads/banner_image/mwr/secondary/3FA77A7E-1DD8-B71B-0B6388E53AF5DC8C.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5)"></span>
-<span data-src="/common/uploads/banner_image/mwr/secondary/3FA77A7E-1DD8-B71B-0B6388E53AF5DC8C.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1440px)"></span>
+<div class="row picturefill-background" style="background-image: url('/common/uploads/banner_image/mwr/secondary/1EA23AF7-1DD8-B71B-0B80F51AA953AD64.jpg?width=2400&height=400&mode=crop&quality=90'); background-position: 50% 0%;" role="img" aria-label="Lowell State Game Area, Tamara Jackson,  North Country Trail Association. ">
+<span data-src="/common/uploads/banner_image/mwr/secondary/1EA23AF7-1DD8-B71B-0B80F51AA953AD64.jpg?width=1200&height=200&mode=crop&quality=90" data-media="(min-width: 1024px)"></span>
+<span data-src="/common/uploads/banner_image/mwr/secondary/1EA23AF7-1DD8-B71B-0B80F51AA953AD64.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (min-resolution: 144dppx)"></span>
+<span data-src="/common/uploads/banner_image/mwr/secondary/1EA23AF7-1DD8-B71B-0B80F51AA953AD64.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5)"></span>
+<span data-src="/common/uploads/banner_image/mwr/secondary/1EA23AF7-1DD8-B71B-0B80F51AA953AD64.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1440px)"></span>
 </div>
 <div id="HeroBanner" class="row">
 <div class="container">
 <div class="col-sm-12">
 <div class="Hero-titleContainer clearfix">
-<a href="/hosp/" class="Hero-title ">Hot Springs</a>
+<a href="/noco/" class="Hero-title ">North Country</a>
 <div class="Hero-designationContainer">
-<span class="Hero-designation">National Park</span>
-<span class="Hero-location">Arkansas</span>
+<span class="Hero-designation">National Scenic Trail</span>
+<span class="Hero-location">MI, MN, ND, NY, OH, PA, WI</span>
 </div>
 </div>
 </div>
@@ -462,13 +478,13 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3428714_481828"> </div></div></div></div></div></div>
+</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425230_481828"> </div></div></div></div></div></div>
 <div id="Park-header">
 <div class="container no-gutter">
 <!--googleoff: index-->
 <div class="col-md-6 col-lg-6 pull-left no-gutter">
 <nav id="LocalNav-desktop-nav" role="navigation" >
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3428714_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3428714|3428714=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425230_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3425230|3425230=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -481,260 +497,131 @@ navTypeTitle = 'Explore This Park';
 <div id="npsNav">
 <ul id="LocalNav" class="sm sm-nps">
 <li>
-<a href="/hosp/index.htm"> Park Home </a>
+<a href="/noco/index.htm"> Park Home </a>
 </li>
 <li class="has-sub">
-<a href="/hosp/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
+<a href="/noco/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
 <li class="active has-sub">
-<a href="/hosp/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
+<a href="/noco/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
-<a href="/hosp/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
+<a href="/noco/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/fees.htm"> Fees & Passes </a>
+<a href="/noco/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/conditions.htm"> Current Conditions </a>
+<a href="/noco/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/weather.htm"> Weather </a>
+<a href="/noco/planyourvisit/permits-and-reervations.htm"> Permits & Reservations </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/pets.htm"> Pets </a>
+<a href="/noco/planyourvisit/weather.htm"> Weather </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/things2know.htm"> Things to Know Before You Come </a>
+<a href="/noco/planyourvisit/pets.htm"> Pets </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/brochures.htm"> Brochures </a>
+<a href="/noco/planyourvisit/brochures.htm"> Brochures </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
+<a href="/noco/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
 <ul>
 <li>
-<a href="/hosp/planyourvisit/maps.htm"> Maps </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/gettingaround.htm"> Getting Around </a>
+<a href="/noco/planyourvisit/maps.htm"> Maps </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
+<a href="/noco/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
 <ul>
 <li>
-<a href="/hosp/planyourvisit/outdooractivities.htm"> Outdoor Activities </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/indooractivities.htm"> Indoor Activities </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/guidedtours.htm"> Guided Tours </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/campground.htm"> Gulpha Gorge Campground </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/planyourvisit/calendar.htm"> Calendar </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/safety.htm"> Safety </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/accessibility.htm"> Accessibility </a>
-</li>
-<li>
-<a href="/hosp/planyourvisit/nearbyattractions.htm"> Nearby Attractions </a>
+<a href="/noco/planyourvisit/national-park-service-passport-stamps.htm"> Passport Stamps </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
-<ul>
-<li class="has-sub">
-<a href="/hosp/learn/news/index.htm" class="has-sub"><span> News </span></a>
+<a href="/noco/planyourvisit/calendar.htm" class="has-sub"><span> Calendar </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/news/newsreleases.htm"> News Releases </a>
+<a href="/noco/planyourvisit/youth_photography.htm"> Youth Nature Photography Exhibit </a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/hosp/learn/photosmultimedia/index.htm"> Photos & Multimedia </a>
+<a href="/noco/planyourvisit/safety.htm"> Safety </a>
 </li>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/index.htm" class="has-sub"><span> History & Culture </span></a>
-<ul>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/people.htm" class="has-sub"><span> People </span></a>
-<ul>
 <li>
-<a href="/hosp/learn/historyculture/oral-history-collection.htm"> Oral History Collection </a>
+<a href="/noco/planyourvisit/accessibility.htm"> Accessibility </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/historyculture/places.htm" class="has-sub"><span> Places </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/historyculture/whittington-park.htm"> Whittington Park </a>
-</li>
-<li>
-<a href="/hosp/learn/historyculture/bathhouse-row.htm"> Bathhouse Row </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/collections.htm" class="has-sub"><span> Collections </span></a>
+<a href="/noco/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
 <ul>
 <li class="has-sub">
-<a href="/hosp/learn/historyculture/archives.htm" class="has-sub"><span> Archives </span></a>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/historyculture/museum-collections.htm" class="has-sub"><span> Museum Collections </span></a>
-</li>
-<li>
-<a href="/hosp/learn/historyculture/research-library.htm"> Research Library </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/learn/historyculture/research.htm"> Research </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/nature/index.htm" class="has-sub"><span> Nature </span></a>
+<a href="/noco/learn/news/index.htm" class="has-sub"><span> News </span></a>
 <ul>
 <li class="has-sub">
-<a href="/hosp/learn/nature/animals.htm" class="has-sub"><span> Animals </span></a>
+<a href="/noco/learn/news/newsreleases.htm" class="has-sub"><span> News Releases </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/nature/amphibians.htm"> Amphibians </a>
+<a href="/noco/learn/news/newsarchive.htm"> Archive </a>
 </li>
-<li>
-<a href="/hosp/learn/nature/birds.htm"> Birds </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/insects.htm"> Insects, Spiders, Centipedes, Millipedes </a>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/nature/mammals.htm" class="has-sub"><span> Mammals </span></a>
+</ul>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/nature/plants.htm" class="has-sub"><span> Plants </span></a>
+<a href="/noco/learn/photosmultimedia/index.htm" class="has-sub"><span> Photos & Multimedia </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/nature/grasses.htm"> Grasses </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/mossesandliverworts.htm"> Mosses and Liverworts </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/treesandshrubs.htm"> Trees and Shrubs </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/learn/nature/environmentalfactors.htm"> Environmental Factors </a>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/nature/naturalfeaturesandecosystems.htm" class="has-sub"><span> Natural Features & Ecosystems </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/nature/hotsprings.htm"> Hot Springs / Geothermal Areas </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/research.htm"> Research </a>
-</li>
-<li>
-<a href="/hosp/learn/nature/inventory-and-monitoring.htm"> Inventory and Monitoring </a>
+<a href="/noco/learn/photosmultimedia/photogallery.htm"> Photo Gallery </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/hosp/learn/education/index.htm" class="has-sub"><span> Education </span></a>
+<a href="/noco/learn/management/index.htm" class="has-sub"><span> Management </span></a>
 <ul>
 <li>
-<a href="/hosp/learn/education/planafieldtrip.htm"> Plan A Field Trip </a>
+<a href="/noco/learn/management/staffandoffices.htm"> Our Staff & Offices </a>
 </li>
 <li>
-<a href="/hosp/learn/education/curriculummaterials.htm"> Curriculum Materials </a>
-</li>
-<li>
-<a href="/hosp/learn/education/travellingtrunks.htm"> Traveling Trunks </a>
-</li>
-<li>
-<a href="/hosp/learn/education/suggestedreading.htm"> Suggested Reading </a>
+<a href="/noco/learn/management/lawsandpolicies.htm"> Laws & Policies </a>
 </li>
 </ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/kidsyouth/index.htm" class="has-sub"><span> Kids & Youth </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/kidsyouth/beajuniorranger.htm"> Be A Junior Ranger </a>
-</li>
-<li>
-<a href="/hosp/learn/kidsyouth/junior-trail-ranger.htm"> Junior Trail Ranger </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/hosp/learn/management/index.htm" class="has-sub"><span> Management </span></a>
-<ul>
-<li>
-<a href="/hosp/learn/management/staffandoffices.htm"> Our Staff & Offices </a>
-</li>
-<li>
-<a href="/hosp/learn/management/statistics.htm"> Park Statistics </a>
-</li>
-<li>
-<a href="/hosp/learn/management/lawsandpolicies.htm"> Laws & Policies </a>
-</li>
-<li>
-<a href="/hosp/learn/management/firemanagement.htm"> Fire Management </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/hosp/getinvolved/supportyourpark/bathhouse-row-emporium.htm"> Bookstore </a>
 </li>
 </ul>
 </li>
 <li class="has-sub last">
-<a href="/hosp/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
+<a href="/noco/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
 <ul>
 <li>
-<a href="/hosp/getinvolved/partners.htm"> Partners </a>
+<a href="/noco/getinvolved/2016.htm"> NPS Centennial </a>
 </li>
 <li>
-<a href="/hosp/getinvolved/donate.htm"> Donate </a>
+<a href="/noco/getinvolved/partners.htm"> Partners </a>
 </li>
 <li>
-<a href="/hosp/getinvolved/volunteer.htm"> Volunteer </a>
+<a href="/noco/getinvolved/volunteer.htm"> Volunteer </a>
 </li>
 <li class="has-sub">
-<a href="/hosp/getinvolved/supportyourpark/index.htm" class="has-sub"><span> Support Your Park </span></a>
+<a href="/noco/getinvolved/planning.htm" class="has-sub"><span> Planning </span></a>
 <ul>
 <li>
-<a href="/hosp/getinvolved/supportyourpark/joinourfriends.htm"> Join Our Friends </a>
+<a href="/noco/learn/management/ncttrailconstructionmanual1.htm"> Handbook for Trail Design, Construction and Maintenance </a>
 </li>
-<li>
-<a href="/hosp/getinvolved/supportyourpark/coopassociation.htm"> Cooperating Association </a>
+</ul>
 </li>
+<li class="has-sub">
+<a href="/noco/getinvolved/supportyourpark/index.htm" class="has-sub"><span> Support Your Park </span></a>
+<ul>
 <li>
-<a href="/hosp/getinvolved/supportyourpark/artist-in-residence-program-information.htm"> Artist-In-Residence Program Information </a>
+<a href="/noco/getinvolved/supportyourpark/coopassociation.htm"> Cooperating Association </a>
 </li>
 </ul>
 </li>
@@ -759,7 +646,7 @@ jQuery("ul#LocalNav > li > a").wrap("<div class='top-lvl-item-container'>").wrap
 <div id="UtilityNav" class="UtilityNav">
 <ul>
 <li>
-<a href="/hosp/planyourvisit/basicinfo.htm" >
+<a href="/noco/planyourvisit/basicinfo.htm" >
 <span class="UtilityNav-text">Info</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#info"></use></svg>
 </a>
@@ -772,19 +659,19 @@ jQuery("ul#LocalNav > li > a").wrap("<div class='top-lvl-item-container'>").wrap
 </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/maps.htm" >
+<a href="/noco/planyourvisit/maps.htm" >
 <span class="UtilityNav-text">Maps</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#location"></use></svg>
 </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/calendar.htm" >
+<a href="/noco/planyourvisit/calendar.htm" >
 <span class="UtilityNav-text">Calendar</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#calendar"></use></svg>
 </a>
 </li>
 <li>
-<a href="/hosp/planyourvisit/permits.htm" >
+<a href="/noco/planyourvisit/permits.htm" >
 <span class="UtilityNav-text">Reserve</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#check"></use></svg>
 </a>
@@ -797,11 +684,11 @@ jQuery("ul#LocalNav > li > a").wrap("<div class='top-lvl-item-container'>").wrap
 </div><!-- id="Park-header"> -->
 <script type="text/javascript">
 jQuery(document).ready(function() {
-//NPS.newContent.placeAlerts( 'hosp','/hosp/nps-alerts-hosp.json', 0 );
+//NPS.newContent.placeAlerts( 'noco','/noco/nps-alerts-noco.json', 0 );
 //var dt = new Date().getTime();
 //JBF 3/16/2016 - wrapped this in a settimeout because utility icons weren't always loading before click
 setTimeout(function() {
-NPS.newContent.placeAlerts( 'hosp','/hosp/nps-alerts-hosp.json', 0 );
+NPS.newContent.placeAlerts( 'noco','/noco/nps-alerts-noco.json', 0 );
 },10);
 });
 </script>
@@ -862,7 +749,7 @@ NPS.display.showAdminTools( 0 );
 </div>
 </div>
 <div class="breadcrumbSourceContainer" style="display:none;">
-<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=3428714|3428714=_CSDPFID -->
+<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=3425230|3425230=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -877,10 +764,10 @@ navTypeTitle = 'Explore This Park';
 <h2>Explore This Park</h2>
 <ul>
 <li class="has-sub">
-<a href="/hosp/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
+<a href="/noco/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
 <li class="active has-sub">
-<a href="/hosp/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
+<a href="/noco/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 </li>
 </ul>
 </li>
@@ -897,21 +784,7 @@ navTypeTitle = 'Explore This Park';
 <div class="row">
 <div class="col-sm-12">
 <div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD">
-<div id="cs_control_5444337" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
-<div class="Component text-content-size text-content-style ArticleTextGroup clearfix">
-<span class="subheading">Superintendent's Compendium - Regulations specific to Hot Springs National Park.</span><br />
-<br />
-<a href="/hosp/planyourvisit/upload/Superintendent-s-Compendium-May-2017-2.pdf" id="CP___PAGEID=5549124|">Superintendent's Compendium May 2017</a> (PDF file 8.19 MB)<br />
-<br />
-<br />
-<span class="subheading">Special Use Permits</span><br />
-<br />
-<a href="/hosp/learn/news/loader.cfm?csModule=security/getfile&amp;PageID=5670130" id="CP___PAGEID=5670130|">First Amendment Activity Planned for 30 September 2017</a> (PDF file, 1 MB)<br />
-<br />
-<a href="/hosp/learn/news/loader.cfm?csModule=security/getfile&amp;PageID=5670135" id="CP___PAGEID=5670135|">First Amendment Activity Planned for 1 October 2017</a> (PDF file, 1 MB)
-</div></div>
-<div id="cs_spacer_5066824" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
-<div id="cs_control_5066824" class="cs_control  CS_Element_Custom">
+<div id="cs_control_5070022" class="cs_control  CS_Element_Custom">
 <div class="row">
 <div class="col-sm-12">
 <div class="panel-group text-content-size text-content-style text-content-style-secondary BasicInfo" id="BasicInfoAccordion" role="tablist" aria-multiselectable="true">
@@ -923,18 +796,16 @@ navTypeTitle = 'Explore This Park';
 <div class="panel-body">
 <div class="row">
 <div class="col-md-12 col-sm-12 col-xs-12">
-<p>Fordyce Bathhouse Visitor Center</p>
-<p><span style="font-size: 11pt;"> </span></p>
 <div class="col-md-5 col-sm-12">
 <div class="physical-address-container" itemscope itemtype="http://schema.org/Place">
 <div class="physical-address">
 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 <span itemprop="streetAddress">
-<span>369 Central Avenue</span><br />
+<span>219 E. Main Street</span><br />
 </span>
-<span itemprop="addressLocality">Hot Springs</span>,
-<span itemprop="addressRegion">AR</span>
-<span itemprop="postalCode">71901     </span><br />
+<span itemprop="addressLocality">Lowell</span>,
+<span itemprop="addressRegion">MI</span>
+<span itemprop="postalCode">49331     </span><br />
 </div>
 </div>
 </div>
@@ -954,10 +825,9 @@ navTypeTitle = 'Explore This Park';
 <div class="text-content-size text-content-style">
 <div class="directions-container" itemscope="" itemtype="http://schema.org/Place">
 <div class="directions">
-<p><span>Hot Springs National Park is a 5,500 acre park in the city of Hot Springs.  Bathhouse Row, a quarter mile long collection of eight bathhouses along the east side of Central Avenue, is the most visited area within the national park.
-</span></p>
+<p><span>When complete, the North Country National Scenic Trail will be approximately 4,600 miles long. Currently, over 2,000 miles of trail are complete and waiting for you to use. Trail headquarters is based in Lowell, Michigan. Find North Country Trail Association's Maps and Trails Data to help you get there at https://northcountrytrail.org/trail/maps.</span></p>
 <div class="col-sm-12">
-<span><a href="http://www.nps.gov/hosp/planyourvisit/directions.htm" class="button button-primary -green carrot-end">Directions Details</a></span><br />
+<span><a href="http://www.nps.gov/noco/planyourvisit/directions.htm" class="button button-primary -green carrot-end">Directions Details</a></span><br />
 </div>
 </div>
 </div>
@@ -976,101 +846,33 @@ navTypeTitle = 'Explore This Park';
 <div class="operating-hours-container" itemscope="" itemtype="http://schema.org/Place">
 <div class="operating-hours" itemprop="openingHoursSpecification" itemscope="" itemtype="http://schema.org/OpeningHoursSpecification">
 <div class="col-sm-12">
-<h4 class="SubSection" itemprop="name">Fordyce Visitor Center</h3>
-<p itemprop="description">Fordyce Visitor Center and Museum closes at 5:00 p.m. The park film stops playing at 4:30 p.m. and the upper floors closes at 4:45 p.m.</p>
+<h4 class="SubSection" itemprop="name">Trail Hours</h3>
+<p itemprop="description">The North Country Trail is generally open at all times and during all seasons. There may be area or seasonal closures at the discretion of the local land owner or manager. Please contact local managers or the North Country Trail Association at (616) 897-5987 x1 for the latest trail closures. </p>
 </div>
 <div class="col-sm-12 HoursSection clearfix">
 <h4 class="HoursSection">Standard Hours</h4>
 <div class="col-md-6 col-sm-6 col-xs-12">
 <ul>
 <li itemProp="dayOfWeek">
-<strong>Sunday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
+<strong>Sunday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Monday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
+<strong>Monday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Tuesday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
+<strong>Tuesday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Wednesday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
+<strong>Wednesday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Thursday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
+<strong>Thursday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Friday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
+<strong>Friday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Saturday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
-</li>
-</ul>
-</div>
-<div class="col-md-12 col-sm-12 col-xs-12">
-<div class="ListingHikingDetails ListingDetails">
-<h3 data-text-inactive="<i class='fa fa-plus-circle'></i> Exceptions" data-text-active="<i class='fa fa-minus-circle'></i> Close Exceptions" data-aria-controls="collapsible-3131-3305" data-class="ListingDetails-button" class="js-collapser" style="display: block;"><span style="border: 0px; clip: rect(0px 0px 0px 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Additional Information</span><button class="js-collapser-button ListingDetails-button" aria-expanded="false"><i class="fa fa-plus-circle"></i> View More</button></h3>
-<div class="row js-collapsible" id="collapsible-3131-3305" aria-hidden="true" style="display: none;">
-<div class="content">
-<div class="ListingDetails-content col-sm-12 col-md-12">
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-12-25" />Christmas Day:<span itemprop="validThrough" content="2015-12-25" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-11-26" />Thanksgiving Day:<span itemprop="validThrough" content="2015-11-26" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-01-01" />New Year’s Day:<span itemprop="validThrough" content="2015-01-01" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-sm-12">
-<h4 class="SubSection" itemprop="name">Roads and Trails</h3>
-<p itemprop="description">Roads to West Mountain and Hot Springs Mountain closes at 10:00 p.m.
-All trails closed at 10:00 p.m</p>
-</div>
-<div class="col-sm-12 HoursSection clearfix">
-<h4 class="HoursSection">Standard Hours</h4>
-<div class="col-md-6 col-sm-6 col-xs-12">
-<ul>
-<li itemProp="dayOfWeek">
-<strong>Sunday:</strong> Sunrise - <time itemprop="closes" content="10:00:00">10:00 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Monday:</strong> Sunrise - <time itemprop="closes" content="10:00:00">10:00 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Tuesday:</strong> Sunrise - <time itemprop="closes" content="10:00:00">10:00 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Wednesday:</strong> Sunrise - <time itemprop="closes" content="10:00:00">10:00 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Thursday:</strong> Sunrise - <time itemprop="closes" content="10:00:00">10:00 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Friday:</strong> Sunrise - <time itemprop="closes" content="10:00:00">10:00 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Saturday:</strong> Sunrise - <time itemprop="closes" content="10:00:00">10:00 PM</time>
+<strong>Saturday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
 </li>
 </ul>
 </div>
@@ -1094,13 +896,7 @@ All trails closed at 10:00 p.m</p>
 </div>
 <div class="row">
 <div class="col-sm-12">
-<p>Temperatures range from >100°F (38°C) to <20°F (-7°C).
-Spring has the highest average rainfall.
-Summer temperatures frequently reach the triple-digit range and high humidity
-Fall begins fall colors and cooler temperatures. Frost starts to become more common.
-Winter  temperatures often fall below 33 degrees and occasionally drop below 0. Roads may be icy.
-Your visit can be more enjoyable by checking the forecast and coming prepared for hikes or walks in the park.
-</p>
+<p>With the trail going through over 4,600 miles through seven states from the Northeast to the Great Plains, weather along the trail can be highly variable. You could be subject to any kind of weather or temperature related emergency depending on your location and the season. Be careful to protect yourself from heat-related illnesses and hypothermia while out on the trail. Be mindful of lightning, severe storms, and other environmental hazards common to the “North Country.”</p>
 </div>
 </div>
 </div>
@@ -1116,17 +912,9 @@ Your visit can be more enjoyable by checking the forecast and coming prepared fo
 <div class="fees-passes-container" itemscope="" itemtype="http://schema.org/Offer">
 <h3 class="SubSection">Entrance Fees:</h3>
 <div class="entrance-fees">
-<div id="fee-3199">
-<p class="FeeTitle"><span itemprop="name">Entrance Fees</span> - <span itemprop="price">$0.00</span></p>
-<p><span itemprop="description">Entrance Fees</span></p>
-</div>
-<div id="fee-3200">
-<p class="FeeTitle"><span itemprop="name">Historic Museum</span> - <span itemprop="price">$0.00</span></p>
-<p><span itemprop="description">Fordyce Museum</span></p>
-</div>
-<div id="fee-3201">
-<p class="FeeTitle"><span itemprop="name">Guided Tours</span> - <span itemprop="price">$0.00</span></p>
-<p><span itemprop="description">Guided Tours</span></p>
+<div id="fee-3276">
+<p class="FeeTitle"><span itemprop="name">Fees</span> - <span itemprop="price">$0.00</span></p>
+<p><span itemprop="description">No fees are charged for hiking on the trail but fees may be required for parking, camping, or entrance at various sections along the trail. http://www.nps.gov/noco/planyourvisit/fees.htm</span></p>
 </div>
 </div>
 </div>
@@ -1140,16 +928,6 @@ Your visit can be more enjoyable by checking the forecast and coming prepared fo
 <div id="collapseSix1" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="visitor-center-container">
-<p>Fordyce Bathhouse Visitor Center</p>
-<p>369 Central Avenue</p>
-<p>Hot Springs, AR 71901</p>
-<p> </p>
-<p> </p>
-<div class="visitor-centers">
-<div id="visitor-center-2454">
-<span><a href="http://www.nps.gov/hosp/planyourvisit/fordyce.htm">Fordyce Bathhouse Visitor Center and Museum</a></span><br />
-<span><p>The restored Fordyce Bathhouse is in the middle of Bathhouse Row in the 300 block of Central Avenue and houses the park visitor center. Exhibits and films orient visitors to Hot Springs and tell the story of thermal water bathing. You can tour twenty-three restored rooms furnished as they appeared during the heyday of the spa. Organized groups can arrange for guided tours with at least two weeks advance notice.</p></span>
-</div>
 </div>
 </div>
 </div>
@@ -1162,13 +940,10 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 </div>
 </div>
 </div>
-<div id="cs_spacer_3443778" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
-<div id="cs_control_3443778" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
+<div id="cs_spacer_3425356" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3425356" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
 <div class="Component text-content-size text-content-style ArticleTextGroup clearfix">
-<p><span style="FONT-SIZE: 12pt"><strong>The Purpose of Hot Springs National Park is to protect its unique geothermal spring water and associated lands for public health, wellness, and enjoyment.</strong></span></p>
-<p><span style="FONT-SIZE: 12pt">Hot Springs National Park was once known as Hot Springs Reservation. It was set aside in 1832 to protect the Park's primary resource, the hot springs.This type of Reservation was an early version of the National Park idea.Hot Springs was actually the first area in the United States to be set aside for its natural features.After Yellowstone was formed in 1872, Hot Springs was managed with it. In 1916 the National Park Service was formed and in 1921, Hot Springs Reservation changed its name to Hot Springs National Park, making it the 18th National Park in the Service.</span></p>
-<p><span style="FONT-SIZE: 12pt">Hot Springs National Park is best known for the 47 hot springs that come out of the Hot Springs Mountain at an average 143° Fahrenheit. Hot Springs National Park is the only unit of the national park system that is mandated to give away its primary natural resource to the general public in an unending and unaltered state. Drinking the hot springs water is perfectly normal, even encouraged. The water is naturally potable (good to drink) when it arrives at the surface of Hot Springs Mountain. Thousands of visitors highly endorse the good quality of the hot springs water and fill bottles to take home.</span></p>
-<p><span style="FONT-SIZE: 12pt">Unfortunately, we do not have any thermal water spring "in nature" where you can get into. Since our water is 143° (F) and is too hot to submerge your body in, there are two operating bathhouses on the Row where you can fully experience the water and drinking fountains have been built so people can enjoy the water that has given the park and the city its name.</span></p>
+<p>There are many different ways to enjoy the North Country National Scenic Trail from hiking for a few hours to an overnight camping trip to an extended backpacking trip. It all depends on the amount of time you have, your energy, and your fitness level. Basic information about planning a visit can be found in the links to the left or on the <a id="http://northcountrytrail.org/trail/hike-planning/|" href="http://northcountrytrail.org/trail/hike-planning/">North Country Trail Association's website</a>.</p>
 </div></div>
 </td></tr>
 </table></div>
@@ -1182,39 +957,40 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <div class="ColumnMain col-sm-12">
 <div class="row">
 <div class="col-sm-12 text-content-size text-content-style">
-<p style="text-align:right;">Last updated: September 29, 2017</p>
+<p style="text-align:right;">Last updated: March 3, 2016</p>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div id="cs_control_828654" class="cs_control  CS_Element_Custom"> </div>
 <!--googleoff: index-->
 <div id="ParkFooter" class="ParkFooter">
 <div class="container">
 <div class="row">
 <div class="col-xs-12 col-sm-6">
 <div class="ParkFooter-contact">
-<h3><a href="/hosp/contacts.htm" class="carrot-end">Contact the Park</a></h3>
+<h3><a href="/noco/contacts.htm" class="carrot-end">Contact the Park</a></h3>
 <div class="vcard">
 <div class="mailing-address" itemscope itemtype="http://schema.org/Place">
 <h4 class="org">Mailing Address:</h4>
 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 <p class="adr">
 <span itemprop="streetAddress" class="street-address">
-101 Reserve Street
+PO Box 288
 </span>
 <br>
-<span><span itemprop="addressLocality">Hot Springs </span>, <span itemprop="addressRegion" class="region">AR</span>
-<span itemprop="postalCode" class="postal-code">71901     </span>
+<span><span itemprop="addressLocality">Lowell</span>, <span itemprop="addressRegion" class="region">MI</span>
+<span itemprop="postalCode" class="postal-code">49331     </span>
 </span>
 </p>
 </div>
 </div>
 <h4>Phone:</h4>
 <p><span itemprop="telephone" class="tel">
-(501) 620-6715</span>
+(616) 319-7906</span>
 </p>
-<h4 class="ParkFooter-contactEmail"><a href="/hosp/contacts.htm" class="carrot-end">Contact Us</a></h4>
+<h4 class="ParkFooter-contactEmail"><a href="/noco/contacts.htm" class="carrot-end">Contact Us</a></h4>
 </div>
 </div>
 </div>
@@ -1225,13 +1001,13 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <h3>Tools</h3>
 <ul class="row">
 <li class="col-xs-6 col-sm-12">
-<a href="/hosp/faqs.htm" ><i class="fa fa-question-circle"></i>FAQ</a>
+<a href="/noco/faqs.htm" ><i class="fa fa-question-circle"></i>FAQ</a>
 </li>
 <li class="col-xs-6 col-sm-12">
-<a href="/hosp/siteindex.htm" ><i class="fa fa-compass"></i>Site Index</a>
+<a href="/noco/siteindex.htm" ><i class="fa fa-compass"></i>Site Index</a>
 </li>
 <li class="col-xs-6 col-sm-12">
-<a href="/hosp/espanol/index.htm" ><i class="fa fa-comment-o"></i>Español</a>
+<a href="/noco/espanol/index.htm" ><i class="fa fa-comment-o"></i>Español</a>
 </li>
 </ul>
 </div>
@@ -1239,18 +1015,8 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <!--googleoff: index-->
 <div class="col-xs-12 col-sm-6 col-md-6 " >
 <div class="ParkFooter-socialLinks">
-<h3>Stay Connected</h3>
-<ul class="ParkFooter-socialLinks row">
-<li class="col-xs-6 col-sm-12 col-md-6">
-<a href="https://www.facebook.com/HotSpringsNPS/"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#facebook"></use></svg>Facebook</a>
-</li>
-<li class="col-xs-6 col-sm-12 col-md-6">
-<a href="https://www.instagram.com/hotspringsnps/"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#instagram-dark"></use></svg>Instagram</a>
-</li>
-</ul>
 </div> <!-- ParkFooter-socialLinks -->
 </div> <!-- col-xs-12 col-sm-6 col-md-6 -->
-<!--googleon: index-->
 </div> <!-- row -->
 </div> <!-- col-xs-12 col-sm-6 -->
 </div> <!-- row -->
@@ -1268,7 +1034,7 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <input class="GlobalSearch-input" type="text" autocomplete="off" id="site_search_footer" name="query" placeholder="Keyword Search">
 <button class="GlobalSearch-button GlobalSearch-submitButton btn-form btn-form-primary js-use-site-limit" type="submit">This Site</button>
 <button class="GlobalSearch-button GlobalSearch-secondaryButton btn-form btn-form-primary" type="submit">All NPS</button>
-<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/hosp" />
+<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/noco" />
 </div>
 </form>
 </div>
@@ -1424,7 +1190,7 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 </html>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-ns.js"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
 <script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script>
@@ -1447,13 +1213,13 @@ if(!commonspot)
 commonspot.csPage = {};
 
 
-	commonspot.csPage.url = '/hosp/planyourvisit/basicinfo.htm';
+	commonspot.csPage.url = '/noco/planyourvisit/basicinfo.htm';
 
 
-commonspot.csPage.id = 3428714;
+commonspot.csPage.id = 3425230;
 
 commonspot.csPage.siteRoot = '/';
-commonspot.csPage.subsiteRoot = '/hosp/planyourvisit/';
+commonspot.csPage.subsiteRoot = '/noco/planyourvisit/';
 
 
 // -->

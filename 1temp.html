@@ -1,6 +1,6 @@
 <!doctype html> <html lang="en" class="no-js"> <!-- Content Copyright National Park Service -->
-<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Basic Information - Buffalo National River (U.S. National Park Service)</title> <script>
-var jsDlgLoader = '/buff/planyourvisit/loader.cfm';
+<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Basic Information - Keweenaw National Historical Park (U.S. National Park Service)</title> <script>
+var jsDlgLoader = '/kewe/planyourvisit/loader.cfm';
 var jsSiteResourceLoader = '/cs-resources.cfm?r=';
 var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
@@ -18,16 +18,16 @@ var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 var gMenuControlID = 0;
 var menus_included = 0;
 var jsSiteID = 1;
-var jsSubSiteID = 21953;
-var js_gvPageID = 3427061;
-var jsPageID = 3427061;
+var jsSubSiteID = 22361;
+var js_gvPageID = 3410219;
+var jsPageID = 3410219;
 var jsPageSetID = 0;
 var jsPageType = 0;
 var jsSiteSecurityCreateControls = 0;
 var jsShowRejectForApprover = 1;
 // -->
 </script><script>
-var jsDlgLoader = '/buff/planyourvisit/loader.cfm';
+var jsDlgLoader = '/kewe/planyourvisit/loader.cfm';
 var jsSiteResourceLoader = '/cs-resources.cfm?r=';
 var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
@@ -69,16 +69,162 @@ border-collapse:separate;
 }
 </style>
 <script src='/common/commonspot/templates/js/federated-analytics-uav1.js?ver=true&agency=DOI&subagency=NPS&exts=rtf,odt,ods,odp&dclink=true&enhlink=true' id='_fed_an_ua_tag'></script>
-<meta property="og:title" content="Basic Information - Buffalo National River (U.S. National Park Service)" />
+<meta property="og:title" content="Basic Information - Keweenaw National Historical Park (U.S. National Park Service)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.nps.gov/buff/planyourvisit/basicinfo.htm" />
+<meta property="og:url" content="https://www.nps.gov/kewe/planyourvisit/basicinfo.htm" />
 <!-- end (5) CustomHead -->
 <!-- beg (6) TertiaryResources -->
+<meta property="og:image" content="https://www.nps.gov/kewe/planyourvisit/images/Ruins-with-Kit_1.jpg" /><meta property="og:image:height" content="300" /><meta property="og:image:width" content="450" /><meta property="og:image:alt" content="Quincy Mine ruins" /><meta property="og:image" content="https://www.nps.gov/kewe/planyourvisit/images/Jeremiah-and-Kathleen-next-to-snow-covered-CVC-sign-2_1.jpg" /><meta property="og:image:height" content="300" /><meta property="og:image:width" content="400" /><meta property="og:image:alt" content="Jeremiah and Kathleen next to snow covered CVC sign 2" />
 <!-- end (6) TertiaryResources -->
 <!-- beg (7) authormode_inlinestyles -->
 <link rel="stylesheet" type="text/css" href="/commonspot/commonspot.css" id="cs_maincss">
 <!-- end (7) authormode_inlinestyles -->
-</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span>
+</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span><script type="text/javascript">
+<!--
+// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+var bCanRollover=0
+if (bName == "Netscape")
+{
+if(bVer >= 3)
+bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+if(bVer >= 4)
+bCanRollover=1;
+}
+function ImageSet(imgID,newTarget)
+{
+if (bCanRollover)
+document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+window.status = "";
+}
+function setStatbar(statbar)
+{
+// #22793 - no-op because browsers don't honor the assignment
+//	var strStatbar=unescape(statbar);
+//	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+if( menus_included == 1 )
+document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink)
+{
+// links are in one of the following formats:
+// 		cpe_60_0,CP___PAGEID=100
+// 		CPNEWWIN:WindowName^params@CP___
+// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+// displaylink is the server relative URL or fully qualified URL
+windowname = "";
+windowparams = "";
+// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL;
+pos = link.indexOf("CPNEWWIN:");
+if (pos != -1)
+{
+pos1 = link.indexOf ("^");
+windowname = link.substring (pos+9, pos1);
+pos2 = link.indexOf ("@");
+windowparams = link.substring (pos1 + 1, pos2);
+link = link.substring (pos2 + 1, link.length);
+}
+if( displaylink && displaylink != "" )
+{
+if (windowname == "")
+window.location = displaylink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (displaylink, windowname, windowparams);
+}
+}
+else
+{
+targetLink = link;
+if (link.indexOf ("CP___") != -1)
+{
+httpPos = -1;
+commaPos = link.indexOf(",");
+if (commaPos != -1)
+{
+targetUrl = link.substr(commaPos + 1);
+if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+{
+httpPos = commaPos + 1;
+}
+}
+if (httpPos != -1)
+{
+targetLink = link.substr(httpPos);
+commaPos = targetLink.indexOf(",");
+if (commaPos != -1)
+targetLink = targetLink.substr(0, commaPos);
+}
+else
+targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
+if (windowname == "")
+window.location = targetLink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (targetLink, windowname, windowparams);
+}
+}
+else
+{
+//commaPos = link.indexOf(",");
+//if (commaPos != -1)
+//	link = link.substr(0, commaPos);
+if (windowname == "")
+window.location = link;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (link, windowname, windowparams);
+}
+}
+}
+}
+function doWindowOpen(href,name,params)
+{
+if (params != '')
+window.open (href, name, params);
+else
+window.open (href, name);
+}
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+function FormatWindowParams(windowparams)
+{
+if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 ||
+windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+{
+windowparams = substringReplace(windowparams,':left=',',left=');
+windowparams = substringReplace(windowparams,'left=','left=');
+windowparams = substringReplace(windowparams,':ww=',',width=');
+windowparams = substringReplace(windowparams,'ww=','width=');
+windowparams = substringReplace(windowparams,':hh=',',height=');
+windowparams = substringReplace(windowparams,'hh=','height=');
+windowparams = substringReplace(windowparams,':loc=',',location=');
+windowparams = substringReplace(windowparams,'loc=','location=');
+windowparams = substringReplace(windowparams,':dir=',',directories=');
+windowparams = substringReplace(windowparams,'dir=','directories=');
+windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+windowparams = substringReplace(windowparams,'tb=','toolbar=');
+windowparams = substringReplace(windowparams,':stat=',',status=');
+windowparams = substringReplace(windowparams,':mb=',',menubar=');
+windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+windowparams = substringReplace(windowparams,':rs=',',resizable=');
+}
+return windowparams;
+}
+// -->
+</script>
 <!--googleoff: index-->
 <div tabindex="-1" id="beforeSkipLinks"></div>
 <div class="skip-links">
@@ -92,7 +238,7 @@ border-collapse:separate;
 </div>
 <!--googleon: index-->
 <!--googleoff: index-->
-<div class="AnniversaryBanner" id="anniversary_banner" data-sitecode="buff" data-sitetype="park"></div>
+<div class="AnniversaryBanner" id="anniversary_banner" data-sitecode="kewe" data-sitetype="park"></div>
 <div class="PromoBanner"></div>
 <!--googleon: index-->
 <!--googleoff: index-->
@@ -113,7 +259,7 @@ border-collapse:separate;
 <input class="GlobalSearch-input" type="text" autocomplete="off" id="site_search" name="query" placeholder="Keyword Search">
 <button class="GlobalSearch-button GlobalSearch-submitButton btn-form btn-form-primary js-use-site-limit" type="submit">This Site</button>
 <button class="GlobalSearch-button GlobalSearch-secondaryButton btn-form btn-form-primary" type="submit">All NPS</button>
-<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/buff" />
+<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/kewe" />
 <div id="search-suggestions"></div>
 </div>
 <script type="text/template" id="suggestionsTemplate">
@@ -151,7 +297,7 @@ Menu
 </div>
 <nav id="GlobalNav-container" class="row" role="navigation" aria-label="NPS Primary Navigation" aria-labelledby="GlobalNav-toggle" tabindex="-1">
 <ul id="GlobalNav" class="GlobalNav GlobalNav-lvl-1">
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3427061_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3427061|3427061=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3410219_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3410219|3410219=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -164,341 +310,346 @@ navTypeTitle = 'Explore This Park';
 <div id="npsNav"><li id="LocalNav-mobile">
 <ul><li class="SectionHeader-green"><h3>Explore This Park</h3></li>
 <li>
-<a href="/buff/index.htm"> Park Home </a>
+<a href="/kewe/index.htm"> Park Home </a>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
+<a href="/kewe/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
 <li class="active has-sub">
-<a href="/buff/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
+<a href="/kewe/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
+<a href="/kewe/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/fees.htm"> Fees & Passes </a>
+<a href="/kewe/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/conditions.htm"> Current Conditions </a>
+<a href="/kewe/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/permitsandreservations.htm"> Permits & Reservations </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/pets.htm"> Pets </a>
+<a href="/kewe/planyourvisit/permitsandreservations.htm"> Permits & Reservations </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
+<a href="/kewe/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/maps.htm"> Maps </a>
+<a href="/kewe/planyourvisit/maps.htm"> Maps </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/getting-around.htm"> Getting Around </a>
+<a href="/kewe/planyourvisit/trafficandtraveltips.htm"> Traffic & Travel Tips </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/publictransportation.htm"> Public Transportation </a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/planyourvisit/accessibility.htm"> Accessibility </a>
+<a href="/kewe/planyourvisit/eatingsleeping.htm"> Eating & Sleeping </a>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/eatingsleeping.htm" class="has-sub"><span> Eating & Sleeping </span></a>
+<a href="/kewe/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/lodging.htm"> Lodging </a>
-</li>
-<li class="has-sub">
-<a href="/buff/planyourvisit/camping.htm" class="has-sub"><span> Camping </span></a>
-<ul>
-<li>
-<a href="/buff/planyourvisit/buffalo-point-campground.htm"> Buffalo Point Campground </a>
+<a href="/kewe/geocache.htm"> Geocaching </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/tyler-bend-campground.htm"> Tyler Bend Campground </a>
+<a href="/kewe/planyourvisit/justforkids.htm"> For Kids </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/firewood.htm"> Firewood </a>
+<a href="/kewe/planyourvisit/guidedtours.htm"> Guided Tours </a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/planyourvisit/where-to-eat.htm"> Restaurants </a>
+<a href="/kewe/planyourvisit/Trip-Itineraries.htm"> Trip Itineraries </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/calendar.htm"> Calendar </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/safety.htm"> Safety </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/accessibility.htm"> Accessibility </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/brochures.htm"> Brochures </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
+<a href="/kewe/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
 <ul>
 <li class="has-sub">
-<a href="/buff/planyourvisit/guidedtours.htm" class="has-sub"><span> Guided Tours </span></a>
+<a href="/kewe/learn/news/index.htm" class="has-sub"><span> News </span></a>
+<ul>
+<li class="has-sub">
+<a href="/kewe/learn/news/newspaper.htm" class="has-sub"><span> Park Newspaper </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/guided-services.htm"> Guided Services </a>
+<a href="/kewe/learn/news/archive.htm"> Park Newspaper Archive </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/floating.htm" class="has-sub"><span> Floating </span></a>
+<a href="/kewe/learn/news/newsreleases.htm" class="has-sub"><span> News Releases </span></a>
 <ul>
 <li>
-<a href="/buff/canoe-rentals.htm"> Canoe Rentals </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/put-ins.htm"> River Accesses </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/river-rules.htm"> RIver Rules </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/planyourvisit/hunting.htm" class="has-sub"><span> Hunting </span></a>
-<ul>
-<li>
-<a href="/buff/learn/management/buffalo-point-archery-update.htm"> Buffalo Point Archery Update </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/planyourvisit/fishing.htm"> Fishing </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/horsebackriding.htm"> Horseback Riding </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/backcountry-camping.htm"> Backcountry Camping </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/hiking-at-buffalo-national-river.htm"> Hiking </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/planyourvisit/calendar.htm"> Calendar </a>
-</li>
-<li class="has-sub">
-<a href="/buff/planyourvisit/safety.htm" class="has-sub"><span> Safety </span></a>
-<ul>
-<li>
-<a href="/buff/planyourvisit/prevention.htm"> Prevent Search & Rescue </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/hazards.htm"> Hazards </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/waterbluffscaves.htm"> Water, Bluffs and Caves </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/planyourvisit/special-park-uses.htm"> Special Park Uses </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/news/index.htm" class="has-sub"><span> News </span></a>
-<ul>
-<li>
-<a href="/buff/learn/management/from-the-superintendent.htm"> From the Superintendent </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/news/newsreleases.htm" class="has-sub"><span> News Releases </span></a>
-<ul>
-<li>
-<a href="/buff/learn/news/newsarchive.htm"> Archive </a>
-</li>
-<li>
-<a href="/buff/learn/news/concessioner-prospectus.htm"> Concessioner Prospectus </a>
+<a href="/kewe/learn/news/newsarchive.htm"> Archive </a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/photosmultimedia/index.htm" class="has-sub"><span> Photos & Multimedia </span></a>
+<a href="/kewe/learn/photosmultimedia/index.htm" class="has-sub"><span> Photos & Multimedia </span></a>
 <ul>
 <li>
-<a href="/buff/learn/photosmultimedia/photogallery.htm"> Photo Gallery </a>
+<a href="/kewe/learn/photosmultimedia/photogallery.htm"> Photo Gallery </a>
+</li>
+<li>
+<a href="/kewe/learn/photosmultimedia/multimedia.htm"> Multimedia Presentations </a>
+</li>
+<li>
+<a href="/kewe/learn/photosmultimedia/webcams.htm"> Webcams </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/historyculture/index.htm" class="has-sub"><span> History & Culture </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/historyculture/people.htm" class="has-sub"><span> People </span></a>
+<a href="/kewe/learn/historyculture/index.htm" class="has-sub"><span> History & Culture </span></a>
 <ul>
 <li>
-<a href="/buff/learn/historyculture/prehistoric-periods.htm"> Prehistoric Periods </a>
+<a href="/kewe/learn/historyculture/archeology.htm"> Archeology </a>
+</li>
+<li>
+<a href="/kewe/learn/historyculture/people.htm"> People </a>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/historyculture/historic-period.htm" class="has-sub"><span> Historic Period </span></a>
+<a href="/kewe/learn/historyculture/places.htm" class="has-sub"><span> Places </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/historyculture/missing-in-the-copper-country.htm"> Missing in the Copper Country </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/historyculture/calumet-unit.htm" class="has-sub"><span> Calumet Unit </span></a>
+</li>
+<li>
+<a href="/kewe/learn/historyculture/windows-into-the-past.htm"> Red Jacket Windows into the Past </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/historyculture/quincy-unit.htm" class="has-sub"><span> Quincy Unit </span></a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/learn/historyculture/stories.htm"> Stories </a>
+<a href="/kewe/learn/historyculture/copper-mining-timeline.htm"> Timeline of Keweenaw Copper Mining </a>
 </li>
 <li>
-<a href="/buff/learn/historyculture/research.htm"> Research </a>
-</li>
-</ul>
+<a href="/kewe/learn/historyculture/working-wednesdays.htm"> Working Wednesdays </a>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/nature/index.htm" class="has-sub"><span> Nature </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/nature/animals.htm" class="has-sub"><span> Animals </span></a>
+<a href="/kewe/learn/historyculture/collections.htm" class="has-sub"><span> Collections </span></a>
 <ul>
 <li>
-<a href="/buff/learn/nature/amphibians.htm"> Amphibians </a>
+<a href="/kewe/learn/historyculture/museum-mondays.htm"> Museum Mondays </a>
 </li>
 <li>
-<a href="/buff/learn/nature/birds.htm"> Birds </a>
+<a href="/kewe/learn/historyculture/museum-guide.htm"> Museum Collections Guide </a>
 </li>
 <li>
-<a href="/buff/learn/nature/crustaceans.htm"> Crustaceans </a>
-</li>
-<li>
-<a href="/buff/learn/nature/insects.htm"> Insects, Spiders, Centipedes, Millipedes </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/mammals.htm" class="has-sub"><span> Mammals </span></a>
-</li>
-<li>
-<a href="/buff/learn/nature/mollusks.htm"> Mollusks </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/plants.htm" class="has-sub"><span> Plants </span></a>
-<ul>
-<li>
-<a href="/buff/learn/nature/treesandshrubs.htm"> Trees and Shrubs </a>
-</li>
-<li>
-<a href="/buff/learn/nature/wildflowers.htm"> Wildflowers </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/environmentalfactors.htm" class="has-sub"><span> Environmental Factors </span></a>
-<ul>
-<li>
-<a href="/buff/learn/nature/fire.htm"> Fire </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/invasive-species.htm" class="has-sub"><span> Invasive species </span></a>
-</li>
-<li>
-<a href="/buff/learn/nature/inventory-and-monitoring.htm"> Inventory and Monitoring </a>
-</li>
-<li>
-<a href="/buff/learn/nature/climate-and-geology.htm"> Climate and Geology </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/naturalfeaturesandecosystems.htm" class="has-sub"><span> Natural Features & Ecosystems </span></a>
-<ul>
-<li>
-<a href="/buff/learn/nature/cave.htm"> Cave / Karst Systems </a>
-</li>
-<li>
-<a href="/buff/learn/nature/forests.htm"> Forests </a>
-</li>
-<li>
-<a href="/buff/learn/nature/rivers.htm"> Rivers and Streams </a>
-</li>
-<li>
-<a href="/buff/learn/nature/springs.htm"> Springs and Seeps </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/learn/nature/research.htm"> Research </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/education/index.htm" class="has-sub"><span> Education </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/education/classrooms/index.htm" class="has-sub"><span> Parks as Classrooms </span></a>
-<ul>
-<li>
-<a href="/buff/learn/education/classrooms/curriculummaterials.htm"> Curriculum Materials </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/education/curriculummaterials.htm" class="has-sub"><span> Curriculum Materials </span></a>
-<ul>
-<li>
-<a href="/buff/learn/education/plan-a-field-trip.htm"> Planning your field trip </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/education/lessonplansandteacherguides.htm" class="has-sub"><span> Lesson Plans & Teacher Guides </span></a>
+<a href="/kewe/learn/historyculture/researcher-information.htm"> Researcher Information </a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/management/index.htm" class="has-sub"><span> Management </span></a>
+<a href="/kewe/learn/nature/index.htm" class="has-sub"><span> Nature </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/nature/animals.htm"> Bats </a>
+</li>
+<li>
+<a href="/kewe/learn/nature/pollinators.htm"> Pollinators </a>
+</li>
+<li>
+<a href="/kewe/learn/nature/environmental-impacts-of-mining-in-the-keweenaw.htm"> Environmental Impacts of Mining </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/nature/geology.htm" class="has-sub"><span> Geology </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/nature/the-mid-continent-rift.htm"> The Midcontinent Rift </a>
+</li>
+<li>
+<a href="/kewe/learn/nature/geologic-timeline.htm"> Geologic Timeline </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/education/index.htm" class="has-sub"><span> Education </span></a>
 <ul>
 <li class="has-sub">
-<a href="/buff/learn/management/lawsandpolicies.htm" class="has-sub"><span> Laws & Policies </span></a>
+<a href="/kewe/learn/education/classrooms/index.htm" class="has-sub"><span> Parks as Classrooms </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/trash-free-park.htm"> Trash Free Park </a>
+<a href="/kewe/learn/education/classrooms/field-trip.htm"> Plan a Field Trip </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/alcohol-in-the-park.htm"> Alcohol in the park </a>
+<a href="/kewe/learn/education/classrooms/copper-traces.htm"> Copper TRACES </a>
+</li>
+</ul>
 </li>
 <li>
-<a href="/buff/planyourvisit/protecting-the-park.htm"> Protecting the park </a>
+<a href="/kewe/professional-development.htm"> Professional Development </a>
+</li>
+<li>
+<a href="/kewe/learn/education/classrooms/curriculum-materials.htm"> Curriculum Materials </a>
+</li>
+<li>
+<a href="/kewe/learn/education/classrooms/classroom-visits.htm"> Classroom Visits </a>
+</li>
+<li>
+<a href="/kewe/partner-programs.htm"> Partner Programs </a>
+</li>
+<li>
+<a href="/kewe/learn/education/classrooms/interpretation-and-education-newsletters.htm"> Newsletters </a>
+</li>
+<li>
+<a href="/kewe/education-resources.htm"> Education Resources </a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/kidsyouth/index.htm" class="has-sub"><span> Kids & Youth </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/kidsyouth/beajuniorranger.htm"> Be A Junior Ranger </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/kidsyouth/parkfun.htm" class="has-sub"><span> Park Fun </span></a>
+<ul>
+<li class="has-sub">
+<a href="/kewe/learn/kidsyouth/smackdown.htm" class="has-sub"><span> Smackdown </span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/management/index.htm" class="has-sub"><span> Management </span></a>
+<ul>
+<li class="has-sub">
+<a href="/kewe/learn/management/advisory-commission.htm" class="has-sub"><span> Advisory Commission </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/advisory-commission-charter.htm"> Commission Charter </a>
+</li>
+<li>
+<a href="/kewe/learn/management/commission-legislation.htm"> Commission Legislation </a>
+</li>
+<li>
+<a href="/kewe/learn/management/commission-members.htm"> Commission Members </a>
+</li>
+<li>
+<a href="/kewe/learn/management/meeting-minutes.htm"> Meeting Minutes </a>
+</li>
+<li>
+<a href="/kewe/learn/management/commission-strategic-plan.htm"> Goals and Objectives </a>
+</li>
+<li>
+<a href="/kewe/learn/management/advisory-commission-reports.htm"> Commission Reports </a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/management/lawsandpolicies.htm" class="has-sub"><span> Laws & Policies </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/firearms-information.htm"> Firearms Information </a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/learn/bookstore.htm"> Bookstore </a>
+<a href="/kewe/learn/bookstore.htm"> Bookstore </a>
 </li>
 </ul>
 </li>
 <li class="has-sub last">
-<a href="/buff/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
+<a href="/kewe/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
 <ul>
 <li>
-<a href="/buff/getinvolved/buffalo-national-river-centennial-events.htm"> Buffalo National River Centennial Events </a>
-</li>
-<li>
-<a href="/buff/getinvolved/2016.htm"> NPS Centennial </a>
-</li>
-<li>
-<a href="/buff/getinvolved/supportyourpark/partnerships.htm"> Partners </a>
-</li>
-<li>
-<a href="/buff/getinvolved/volunteer.htm"> Volunteer </a>
-</li>
-<li>
-<a href="/buff/getinvolved/workwithus.htm"> Work With Us </a>
+<a href="/kewe/getinvolved/2016.htm"> NPS Centennial </a>
 </li>
 <li class="has-sub">
-<a href="/buff/getinvolved/dobusinesswithus.htm" class="has-sub"><span> Do Business With Us </span></a>
+<a href="/kewe/getinvolved/partners.htm" class="has-sub"><span> Partners </span></a>
 <ul>
 <li>
-<a href="/buff/learn/management/concession-contracts.htm"> Concession Contracts </a>
+<a href="/kewe/learn/management/keweenaw-heritage-sites.htm"> Heritage Sites </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/management/partner-resources.htm" class="has-sub"><span> Partner Resources </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/historic-preservation-resources.htm"> Historic Preservation </a>
 </li>
 <li>
-<a href="/buff/learn/management/commercial-use-authorizations.htm"> Commercial Use Authorizations </a>
+<a href="/kewe/learn/management/museum-management-resources.htm"> Museum Management </a>
+</li>
+<li>
+<a href="/kewe/learn/management/interpretation-resources.htm"> Interpretation & Education </a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/kewe/learn/management/grants.htm"> Grants </a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/kewe/getinvolved/volunteer.htm"> Volunteer </a>
+</li>
+<li>
+<a href="/kewe/getinvolved/workwithus.htm"> Work With Us </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/getinvolved/planning.htm" class="has-sub"><span> Planning </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/calumet-unit-clr.htm"> Calumet Unit Cultural Landscape Report </a>
+</li>
+<li>
+<a href="/kewe/learn/management/interpretation-and-education-planning.htm"> Interpretation & Education Planning </a>
+</li>
+<li>
+<a href="/kewe/learn/management/general-management-plan.htm"> General Management Plan </a>
+</li>
+<li>
+<a href="/kewe/learn/management/quincy-clr.htm"> Quincy Cultural Landscape Report </a>
+</li>
+<li>
+<a href="/kewe/learn/management/park-planning-archives.htm"> Park Planning Archives </a>
+</li>
+<li>
+<a href="/kewe/learn/management/quincy-smelter-planning.htm"> Quincy Smelter </a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/getinvolved/supportyourpark/index.htm" class="has-sub"><span> Support Your Park </span></a>
+<ul>
+<li>
+<a href="/kewe/getinvolved/supportyourpark/joinourfriends.htm"> Join Our Friends </a>
+</li>
+<li>
+<a href="/kewe/getinvolved/supportyourpark/leavenotrace.htm"> Leave No Trace </a>
 </li>
 </ul>
 </li>
@@ -519,23 +670,23 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3427061_828672">
+<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3410219_828672">
 <div id="HERO" class="Hero -secondary">
 <div class="container-fluid">
-<div class="row picturefill-background" style="background-image: url('/common/uploads/banner_image/mwr/secondary/786250B6-1DD8-B71B-0BEEE9BD674F6B79.jpg?width=2400&height=400&mode=crop&quality=90'); background-position: 50% 0%;" role="img" aria-label="Hikers on the Lost Valley Trail">
-<span data-src="/common/uploads/banner_image/mwr/secondary/786250B6-1DD8-B71B-0BEEE9BD674F6B79.jpg?width=1200&height=200&mode=crop&quality=90" data-media="(min-width: 1024px)"></span>
-<span data-src="/common/uploads/banner_image/mwr/secondary/786250B6-1DD8-B71B-0BEEE9BD674F6B79.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (min-resolution: 144dppx)"></span>
-<span data-src="/common/uploads/banner_image/mwr/secondary/786250B6-1DD8-B71B-0BEEE9BD674F6B79.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5)"></span>
-<span data-src="/common/uploads/banner_image/mwr/secondary/786250B6-1DD8-B71B-0BEEE9BD674F6B79.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1440px)"></span>
+<div class="row picturefill-background" style="background-image: url('/common/uploads/banner_image/mwr/secondary/4D6B75C9-1DD8-B71B-0BBB8E496E087DE6.jpg?width=2400&height=400&mode=crop&quality=90'); background-position: 50% 0%;" role="img" aria-label="workers at the C&H Smelter">
+<span data-src="/common/uploads/banner_image/mwr/secondary/4D6B75C9-1DD8-B71B-0BBB8E496E087DE6.jpg?width=1200&height=200&mode=crop&quality=90" data-media="(min-width: 1024px)"></span>
+<span data-src="/common/uploads/banner_image/mwr/secondary/4D6B75C9-1DD8-B71B-0BBB8E496E087DE6.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (min-resolution: 144dppx)"></span>
+<span data-src="/common/uploads/banner_image/mwr/secondary/4D6B75C9-1DD8-B71B-0BBB8E496E087DE6.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5)"></span>
+<span data-src="/common/uploads/banner_image/mwr/secondary/4D6B75C9-1DD8-B71B-0BBB8E496E087DE6.jpg?width=2400&height=400&mode=crop&quality=90" data-media="(min-width: 1440px)"></span>
 </div>
 <div id="HeroBanner" class="row">
 <div class="container">
 <div class="col-sm-12">
 <div class="Hero-titleContainer clearfix">
-<a href="/buff/" class="Hero-title ">Buffalo</a>
+<a href="/kewe/" class="Hero-title ">Keweenaw</a>
 <div class="Hero-designationContainer">
-<span class="Hero-designation">National River</span>
-<span class="Hero-location">Arkansas</span>
+<span class="Hero-designation">National Historical Park</span>
+<span class="Hero-location">Michigan</span>
 </div>
 </div>
 </div>
@@ -543,13 +694,13 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3427061_481828"> </div></div></div></div></div></div>
+</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3410219_481828"> </div></div></div></div></div></div>
 <div id="Park-header">
 <div class="container no-gutter">
 <!--googleoff: index-->
 <div class="col-md-6 col-lg-6 pull-left no-gutter">
 <nav id="LocalNav-desktop-nav" role="navigation" >
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3427061_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3427061|3427061=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3410219_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3410219|3410219=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -562,341 +713,346 @@ navTypeTitle = 'Explore This Park';
 <div id="npsNav">
 <ul id="LocalNav" class="sm sm-nps">
 <li>
-<a href="/buff/index.htm"> Park Home </a>
+<a href="/kewe/index.htm"> Park Home </a>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
+<a href="/kewe/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
 <li class="active has-sub">
-<a href="/buff/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
+<a href="/kewe/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
+<a href="/kewe/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/fees.htm"> Fees & Passes </a>
+<a href="/kewe/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/conditions.htm"> Current Conditions </a>
+<a href="/kewe/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/permitsandreservations.htm"> Permits & Reservations </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/pets.htm"> Pets </a>
+<a href="/kewe/planyourvisit/permitsandreservations.htm"> Permits & Reservations </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
+<a href="/kewe/planyourvisit/directions.htm" class="has-sub"><span> Directions & Transportation </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/maps.htm"> Maps </a>
+<a href="/kewe/planyourvisit/maps.htm"> Maps </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/getting-around.htm"> Getting Around </a>
+<a href="/kewe/planyourvisit/trafficandtraveltips.htm"> Traffic & Travel Tips </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/publictransportation.htm"> Public Transportation </a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/planyourvisit/accessibility.htm"> Accessibility </a>
+<a href="/kewe/planyourvisit/eatingsleeping.htm"> Eating & Sleeping </a>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/eatingsleeping.htm" class="has-sub"><span> Eating & Sleeping </span></a>
+<a href="/kewe/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/lodging.htm"> Lodging </a>
-</li>
-<li class="has-sub">
-<a href="/buff/planyourvisit/camping.htm" class="has-sub"><span> Camping </span></a>
-<ul>
-<li>
-<a href="/buff/planyourvisit/buffalo-point-campground.htm"> Buffalo Point Campground </a>
+<a href="/kewe/geocache.htm"> Geocaching </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/tyler-bend-campground.htm"> Tyler Bend Campground </a>
+<a href="/kewe/planyourvisit/justforkids.htm"> For Kids </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/firewood.htm"> Firewood </a>
+<a href="/kewe/planyourvisit/guidedtours.htm"> Guided Tours </a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/planyourvisit/where-to-eat.htm"> Restaurants </a>
+<a href="/kewe/planyourvisit/Trip-Itineraries.htm"> Trip Itineraries </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/calendar.htm"> Calendar </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/safety.htm"> Safety </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/accessibility.htm"> Accessibility </a>
+</li>
+<li>
+<a href="/kewe/planyourvisit/brochures.htm"> Brochures </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/things2do.htm" class="has-sub"><span> Things To Do </span></a>
+<a href="/kewe/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
 <ul>
 <li class="has-sub">
-<a href="/buff/planyourvisit/guidedtours.htm" class="has-sub"><span> Guided Tours </span></a>
+<a href="/kewe/learn/news/index.htm" class="has-sub"><span> News </span></a>
+<ul>
+<li class="has-sub">
+<a href="/kewe/learn/news/newspaper.htm" class="has-sub"><span> Park Newspaper </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/guided-services.htm"> Guided Services </a>
+<a href="/kewe/learn/news/archive.htm"> Park Newspaper Archive </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/planyourvisit/floating.htm" class="has-sub"><span> Floating </span></a>
+<a href="/kewe/learn/news/newsreleases.htm" class="has-sub"><span> News Releases </span></a>
 <ul>
 <li>
-<a href="/buff/canoe-rentals.htm"> Canoe Rentals </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/put-ins.htm"> River Accesses </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/river-rules.htm"> RIver Rules </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/planyourvisit/hunting.htm" class="has-sub"><span> Hunting </span></a>
-<ul>
-<li>
-<a href="/buff/learn/management/buffalo-point-archery-update.htm"> Buffalo Point Archery Update </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/planyourvisit/fishing.htm"> Fishing </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/horsebackriding.htm"> Horseback Riding </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/backcountry-camping.htm"> Backcountry Camping </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/hiking-at-buffalo-national-river.htm"> Hiking </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/planyourvisit/calendar.htm"> Calendar </a>
-</li>
-<li class="has-sub">
-<a href="/buff/planyourvisit/safety.htm" class="has-sub"><span> Safety </span></a>
-<ul>
-<li>
-<a href="/buff/planyourvisit/prevention.htm"> Prevent Search & Rescue </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/hazards.htm"> Hazards </a>
-</li>
-<li>
-<a href="/buff/planyourvisit/waterbluffscaves.htm"> Water, Bluffs and Caves </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/planyourvisit/special-park-uses.htm"> Special Park Uses </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/index.htm" class="has-sub"><span> Learn About the Park </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/news/index.htm" class="has-sub"><span> News </span></a>
-<ul>
-<li>
-<a href="/buff/learn/management/from-the-superintendent.htm"> From the Superintendent </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/news/newsreleases.htm" class="has-sub"><span> News Releases </span></a>
-<ul>
-<li>
-<a href="/buff/learn/news/newsarchive.htm"> Archive </a>
-</li>
-<li>
-<a href="/buff/learn/news/concessioner-prospectus.htm"> Concessioner Prospectus </a>
+<a href="/kewe/learn/news/newsarchive.htm"> Archive </a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/photosmultimedia/index.htm" class="has-sub"><span> Photos & Multimedia </span></a>
+<a href="/kewe/learn/photosmultimedia/index.htm" class="has-sub"><span> Photos & Multimedia </span></a>
 <ul>
 <li>
-<a href="/buff/learn/photosmultimedia/photogallery.htm"> Photo Gallery </a>
+<a href="/kewe/learn/photosmultimedia/photogallery.htm"> Photo Gallery </a>
+</li>
+<li>
+<a href="/kewe/learn/photosmultimedia/multimedia.htm"> Multimedia Presentations </a>
+</li>
+<li>
+<a href="/kewe/learn/photosmultimedia/webcams.htm"> Webcams </a>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/historyculture/index.htm" class="has-sub"><span> History & Culture </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/historyculture/people.htm" class="has-sub"><span> People </span></a>
+<a href="/kewe/learn/historyculture/index.htm" class="has-sub"><span> History & Culture </span></a>
 <ul>
 <li>
-<a href="/buff/learn/historyculture/prehistoric-periods.htm"> Prehistoric Periods </a>
+<a href="/kewe/learn/historyculture/archeology.htm"> Archeology </a>
+</li>
+<li>
+<a href="/kewe/learn/historyculture/people.htm"> People </a>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/historyculture/historic-period.htm" class="has-sub"><span> Historic Period </span></a>
+<a href="/kewe/learn/historyculture/places.htm" class="has-sub"><span> Places </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/historyculture/missing-in-the-copper-country.htm"> Missing in the Copper Country </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/historyculture/calumet-unit.htm" class="has-sub"><span> Calumet Unit </span></a>
+</li>
+<li>
+<a href="/kewe/learn/historyculture/windows-into-the-past.htm"> Red Jacket Windows into the Past </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/historyculture/quincy-unit.htm" class="has-sub"><span> Quincy Unit </span></a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/learn/historyculture/stories.htm"> Stories </a>
+<a href="/kewe/learn/historyculture/copper-mining-timeline.htm"> Timeline of Keweenaw Copper Mining </a>
 </li>
 <li>
-<a href="/buff/learn/historyculture/research.htm"> Research </a>
-</li>
-</ul>
+<a href="/kewe/learn/historyculture/working-wednesdays.htm"> Working Wednesdays </a>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/nature/index.htm" class="has-sub"><span> Nature </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/nature/animals.htm" class="has-sub"><span> Animals </span></a>
+<a href="/kewe/learn/historyculture/collections.htm" class="has-sub"><span> Collections </span></a>
 <ul>
 <li>
-<a href="/buff/learn/nature/amphibians.htm"> Amphibians </a>
+<a href="/kewe/learn/historyculture/museum-mondays.htm"> Museum Mondays </a>
 </li>
 <li>
-<a href="/buff/learn/nature/birds.htm"> Birds </a>
+<a href="/kewe/learn/historyculture/museum-guide.htm"> Museum Collections Guide </a>
 </li>
 <li>
-<a href="/buff/learn/nature/crustaceans.htm"> Crustaceans </a>
-</li>
-<li>
-<a href="/buff/learn/nature/insects.htm"> Insects, Spiders, Centipedes, Millipedes </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/mammals.htm" class="has-sub"><span> Mammals </span></a>
-</li>
-<li>
-<a href="/buff/learn/nature/mollusks.htm"> Mollusks </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/plants.htm" class="has-sub"><span> Plants </span></a>
-<ul>
-<li>
-<a href="/buff/learn/nature/treesandshrubs.htm"> Trees and Shrubs </a>
-</li>
-<li>
-<a href="/buff/learn/nature/wildflowers.htm"> Wildflowers </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/environmentalfactors.htm" class="has-sub"><span> Environmental Factors </span></a>
-<ul>
-<li>
-<a href="/buff/learn/nature/fire.htm"> Fire </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/invasive-species.htm" class="has-sub"><span> Invasive species </span></a>
-</li>
-<li>
-<a href="/buff/learn/nature/inventory-and-monitoring.htm"> Inventory and Monitoring </a>
-</li>
-<li>
-<a href="/buff/learn/nature/climate-and-geology.htm"> Climate and Geology </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/nature/naturalfeaturesandecosystems.htm" class="has-sub"><span> Natural Features & Ecosystems </span></a>
-<ul>
-<li>
-<a href="/buff/learn/nature/cave.htm"> Cave / Karst Systems </a>
-</li>
-<li>
-<a href="/buff/learn/nature/forests.htm"> Forests </a>
-</li>
-<li>
-<a href="/buff/learn/nature/rivers.htm"> Rivers and Streams </a>
-</li>
-<li>
-<a href="/buff/learn/nature/springs.htm"> Springs and Seeps </a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/buff/learn/nature/research.htm"> Research </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/education/index.htm" class="has-sub"><span> Education </span></a>
-<ul>
-<li class="has-sub">
-<a href="/buff/learn/education/classrooms/index.htm" class="has-sub"><span> Parks as Classrooms </span></a>
-<ul>
-<li>
-<a href="/buff/learn/education/classrooms/curriculummaterials.htm"> Curriculum Materials </a>
-</li>
-</ul>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/education/curriculummaterials.htm" class="has-sub"><span> Curriculum Materials </span></a>
-<ul>
-<li>
-<a href="/buff/learn/education/plan-a-field-trip.htm"> Planning your field trip </a>
-</li>
-<li class="has-sub">
-<a href="/buff/learn/education/lessonplansandteacherguides.htm" class="has-sub"><span> Lesson Plans & Teacher Guides </span></a>
+<a href="/kewe/learn/historyculture/researcher-information.htm"> Researcher Information </a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="has-sub">
-<a href="/buff/learn/management/index.htm" class="has-sub"><span> Management </span></a>
+<a href="/kewe/learn/nature/index.htm" class="has-sub"><span> Nature </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/nature/animals.htm"> Bats </a>
+</li>
+<li>
+<a href="/kewe/learn/nature/pollinators.htm"> Pollinators </a>
+</li>
+<li>
+<a href="/kewe/learn/nature/environmental-impacts-of-mining-in-the-keweenaw.htm"> Environmental Impacts of Mining </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/nature/geology.htm" class="has-sub"><span> Geology </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/nature/the-mid-continent-rift.htm"> The Midcontinent Rift </a>
+</li>
+<li>
+<a href="/kewe/learn/nature/geologic-timeline.htm"> Geologic Timeline </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/education/index.htm" class="has-sub"><span> Education </span></a>
 <ul>
 <li class="has-sub">
-<a href="/buff/learn/management/lawsandpolicies.htm" class="has-sub"><span> Laws & Policies </span></a>
+<a href="/kewe/learn/education/classrooms/index.htm" class="has-sub"><span> Parks as Classrooms </span></a>
 <ul>
 <li>
-<a href="/buff/planyourvisit/trash-free-park.htm"> Trash Free Park </a>
+<a href="/kewe/learn/education/classrooms/field-trip.htm"> Plan a Field Trip </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/alcohol-in-the-park.htm"> Alcohol in the park </a>
+<a href="/kewe/learn/education/classrooms/copper-traces.htm"> Copper TRACES </a>
+</li>
+</ul>
 </li>
 <li>
-<a href="/buff/planyourvisit/protecting-the-park.htm"> Protecting the park </a>
+<a href="/kewe/professional-development.htm"> Professional Development </a>
+</li>
+<li>
+<a href="/kewe/learn/education/classrooms/curriculum-materials.htm"> Curriculum Materials </a>
+</li>
+<li>
+<a href="/kewe/learn/education/classrooms/classroom-visits.htm"> Classroom Visits </a>
+</li>
+<li>
+<a href="/kewe/partner-programs.htm"> Partner Programs </a>
+</li>
+<li>
+<a href="/kewe/learn/education/classrooms/interpretation-and-education-newsletters.htm"> Newsletters </a>
+</li>
+<li>
+<a href="/kewe/education-resources.htm"> Education Resources </a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/kidsyouth/index.htm" class="has-sub"><span> Kids & Youth </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/kidsyouth/beajuniorranger.htm"> Be A Junior Ranger </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/kidsyouth/parkfun.htm" class="has-sub"><span> Park Fun </span></a>
+<ul>
+<li class="has-sub">
+<a href="/kewe/learn/kidsyouth/smackdown.htm" class="has-sub"><span> Smackdown </span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/management/index.htm" class="has-sub"><span> Management </span></a>
+<ul>
+<li class="has-sub">
+<a href="/kewe/learn/management/advisory-commission.htm" class="has-sub"><span> Advisory Commission </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/advisory-commission-charter.htm"> Commission Charter </a>
+</li>
+<li>
+<a href="/kewe/learn/management/commission-legislation.htm"> Commission Legislation </a>
+</li>
+<li>
+<a href="/kewe/learn/management/commission-members.htm"> Commission Members </a>
+</li>
+<li>
+<a href="/kewe/learn/management/meeting-minutes.htm"> Meeting Minutes </a>
+</li>
+<li>
+<a href="/kewe/learn/management/commission-strategic-plan.htm"> Goals and Objectives </a>
+</li>
+<li>
+<a href="/kewe/learn/management/advisory-commission-reports.htm"> Commission Reports </a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/management/lawsandpolicies.htm" class="has-sub"><span> Laws & Policies </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/firearms-information.htm"> Firearms Information </a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<a href="/buff/learn/bookstore.htm"> Bookstore </a>
+<a href="/kewe/learn/bookstore.htm"> Bookstore </a>
 </li>
 </ul>
 </li>
 <li class="has-sub last">
-<a href="/buff/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
+<a href="/kewe/getinvolved/index.htm" class="has-sub"><span> Get Involved </span></a>
 <ul>
 <li>
-<a href="/buff/getinvolved/buffalo-national-river-centennial-events.htm"> Buffalo National River Centennial Events </a>
-</li>
-<li>
-<a href="/buff/getinvolved/2016.htm"> NPS Centennial </a>
-</li>
-<li>
-<a href="/buff/getinvolved/supportyourpark/partnerships.htm"> Partners </a>
-</li>
-<li>
-<a href="/buff/getinvolved/volunteer.htm"> Volunteer </a>
-</li>
-<li>
-<a href="/buff/getinvolved/workwithus.htm"> Work With Us </a>
+<a href="/kewe/getinvolved/2016.htm"> NPS Centennial </a>
 </li>
 <li class="has-sub">
-<a href="/buff/getinvolved/dobusinesswithus.htm" class="has-sub"><span> Do Business With Us </span></a>
+<a href="/kewe/getinvolved/partners.htm" class="has-sub"><span> Partners </span></a>
 <ul>
 <li>
-<a href="/buff/learn/management/concession-contracts.htm"> Concession Contracts </a>
+<a href="/kewe/learn/management/keweenaw-heritage-sites.htm"> Heritage Sites </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/learn/management/partner-resources.htm" class="has-sub"><span> Partner Resources </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/historic-preservation-resources.htm"> Historic Preservation </a>
 </li>
 <li>
-<a href="/buff/learn/management/commercial-use-authorizations.htm"> Commercial Use Authorizations </a>
+<a href="/kewe/learn/management/museum-management-resources.htm"> Museum Management </a>
+</li>
+<li>
+<a href="/kewe/learn/management/interpretation-resources.htm"> Interpretation & Education </a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/kewe/learn/management/grants.htm"> Grants </a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/kewe/getinvolved/volunteer.htm"> Volunteer </a>
+</li>
+<li>
+<a href="/kewe/getinvolved/workwithus.htm"> Work With Us </a>
+</li>
+<li class="has-sub">
+<a href="/kewe/getinvolved/planning.htm" class="has-sub"><span> Planning </span></a>
+<ul>
+<li>
+<a href="/kewe/learn/management/calumet-unit-clr.htm"> Calumet Unit Cultural Landscape Report </a>
+</li>
+<li>
+<a href="/kewe/learn/management/interpretation-and-education-planning.htm"> Interpretation & Education Planning </a>
+</li>
+<li>
+<a href="/kewe/learn/management/general-management-plan.htm"> General Management Plan </a>
+</li>
+<li>
+<a href="/kewe/learn/management/quincy-clr.htm"> Quincy Cultural Landscape Report </a>
+</li>
+<li>
+<a href="/kewe/learn/management/park-planning-archives.htm"> Park Planning Archives </a>
+</li>
+<li>
+<a href="/kewe/learn/management/quincy-smelter-planning.htm"> Quincy Smelter </a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href="/kewe/getinvolved/supportyourpark/index.htm" class="has-sub"><span> Support Your Park </span></a>
+<ul>
+<li>
+<a href="/kewe/getinvolved/supportyourpark/joinourfriends.htm"> Join Our Friends </a>
+</li>
+<li>
+<a href="/kewe/getinvolved/supportyourpark/leavenotrace.htm"> Leave No Trace </a>
 </li>
 </ul>
 </li>
@@ -921,7 +1077,7 @@ jQuery("ul#LocalNav > li > a").wrap("<div class='top-lvl-item-container'>").wrap
 <div id="UtilityNav" class="UtilityNav">
 <ul>
 <li>
-<a href="/buff/planyourvisit/basicinfo.htm" >
+<a href="/kewe/planyourvisit/basicinfo.htm" >
 <span class="UtilityNav-text">Info</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#info"></use></svg>
 </a>
@@ -934,19 +1090,19 @@ jQuery("ul#LocalNav > li > a").wrap("<div class='top-lvl-item-container'>").wrap
 </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/maps.htm" >
+<a href="/kewe/planyourvisit/maps.htm" >
 <span class="UtilityNav-text">Maps</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#location"></use></svg>
 </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/calendar.htm" >
+<a href="/kewe/planyourvisit/calendar.htm" >
 <span class="UtilityNav-text">Calendar</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#calendar"></use></svg>
 </a>
 </li>
 <li>
-<a href="/buff/planyourvisit/permitsandreservations.htm" >
+<a href="/kewe/planyourvisit/permitsandreservations.htm" >
 <span class="UtilityNav-text">Reserve</span>
 <svg class="icon" role="img" focusable="false"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#check"></use></svg>
 </a>
@@ -959,11 +1115,11 @@ jQuery("ul#LocalNav > li > a").wrap("<div class='top-lvl-item-container'>").wrap
 </div><!-- id="Park-header"> -->
 <script type="text/javascript">
 jQuery(document).ready(function() {
-//NPS.newContent.placeAlerts( 'buff','/buff/nps-alerts-buff.json', 0 );
+//NPS.newContent.placeAlerts( 'kewe','/kewe/nps-alerts-kewe.json', 0 );
 //var dt = new Date().getTime();
 //JBF 3/16/2016 - wrapped this in a settimeout because utility icons weren't always loading before click
 setTimeout(function() {
-NPS.newContent.placeAlerts( 'buff','/buff/nps-alerts-buff.json', 0 );
+NPS.newContent.placeAlerts( 'kewe','/kewe/nps-alerts-kewe.json', 0 );
 },10);
 });
 </script>
@@ -1024,7 +1180,7 @@ NPS.display.showAdminTools( 0 );
 </div>
 </div>
 <div class="breadcrumbSourceContainer" style="display:none;">
-<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=3427061|3427061=_CSDPFID -->
+<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=3410219|3410219=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -1039,10 +1195,10 @@ navTypeTitle = 'Explore This Park';
 <h2>Explore This Park</h2>
 <ul>
 <li class="has-sub">
-<a href="/buff/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
+<a href="/kewe/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
 <li class="active has-sub">
-<a href="/buff/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
+<a href="/kewe/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 </li>
 </ul>
 </li>
@@ -1059,7 +1215,7 @@ navTypeTitle = 'Explore This Park';
 <div class="row">
 <div class="col-sm-12">
 <div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD">
-<div id="cs_control_5065709" class="cs_control  CS_Element_Custom">
+<div id="cs_control_5066925" class="cs_control  CS_Element_Custom">
 <div class="row">
 <div class="col-sm-12">
 <div class="panel-group text-content-size text-content-style text-content-style-secondary BasicInfo" id="BasicInfoAccordion" role="tablist" aria-multiselectable="true">
@@ -1076,11 +1232,11 @@ navTypeTitle = 'Explore This Park';
 <div class="physical-address">
 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 <span itemprop="streetAddress">
-<span>170 Ranger Road</span><br />
+<span>25970 Red Jacket Road</span><br />
 </span>
-<span itemprop="addressLocality">St. Joe</span>,
-<span itemprop="addressRegion">AR</span>
-<span itemprop="postalCode">72675     </span><br />
+<span itemprop="addressLocality">Calumet</span>,
+<span itemprop="addressRegion">MI</span>
+<span itemprop="postalCode">49913     </span><br />
 </div>
 </div>
 </div>
@@ -1100,11 +1256,10 @@ navTypeTitle = 'Explore This Park';
 <div class="text-content-size text-content-style">
 <div class="directions-container" itemscope="" itemtype="http://schema.org/Place">
 <div class="directions">
-<p><span>Buffalo National River is a long, narrow park that is crossed by three main highways.
-Highways 7, 43, and 62/65 are the main roads out of Harrison, Arkansas that will take you to the Buffalo River, depending on which part of the park you wish to visit.
-GPS systems are not reliable in this area so please call ahead for directions or pick up a map of the area beforehand. </span></p>
+<p><span>Keweenaw National Historical Park is located is located on the Keweenaw Peninsula, the northernmost part of Upper Michigan.
+</span></p>
 <div class="col-sm-12">
-<span><a href="http://www.nps.gov/buff/planyourvisit/directions.htm" class="button button-primary -green carrot-end">Directions Details</a></span><br />
+<span><a href="http://www.nps.gov/kewe/planyourvisit/directions.htm" class="button button-primary -green carrot-end">Directions Details</a></span><br />
 </div>
 </div>
 </div>
@@ -1123,201 +1278,38 @@ GPS systems are not reliable in this area so please call ahead for directions or
 <div class="operating-hours-container" itemscope="" itemtype="http://schema.org/Place">
 <div class="operating-hours" itemprop="openingHoursSpecification" itemscope="" itemtype="http://schema.org/OpeningHoursSpecification">
 <div class="col-sm-12">
-<h4 class="SubSection" itemprop="name">Tyler Bend Visitor Center </h3>
-<p itemprop="description">Tyler Bend Visitor Center is Buffalo National River's main visitor center. It is located in the middle district of the river off of Highway 65 in between St. Joe and Marshall, Arkansas. </p>
+<h4 class="SubSection" itemprop="name">Calumet Visitor Center</h3>
+<p itemprop="description">The Calumet Visitor Center is open year-round, but operating days and hours vary.  Call park headquarters at (906) 337-3168 for the most up-to-date hours of operation.
+2017 / 2018 Operating Hours:
+October: Wednesday - Friday, 9am - 5pm EST
+November - Memorial Day: Friday and Saturday, 10am-3pm EST</p>
 </div>
 <div class="col-sm-12 HoursSection clearfix">
 <h4 class="HoursSection">Standard Hours</h4>
 <div class="col-md-6 col-sm-6 col-xs-12">
 <ul>
 <li itemProp="dayOfWeek">
-<strong>Sunday:</strong> <time itemprop="opens" content="08:30:00">8:30 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
+<strong>Sunday:</strong> Closed
 </li>
 <li itemProp="dayOfWeek">
-<strong>Monday:</strong> <time itemprop="opens" content="08:30:00">8:30 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
+<strong>Monday:</strong> Closed
 </li>
 <li itemProp="dayOfWeek">
-<strong>Tuesday:</strong> <time itemprop="opens" content="08:30:00">8:30 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
+<strong>Tuesday:</strong> Closed
 </li>
 <li itemProp="dayOfWeek">
-<strong>Wednesday:</strong> <time itemprop="opens" content="08:30:00">8:30 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
+<strong>Wednesday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Thursday:</strong> <time itemprop="opens" content="08:30:00">8:30 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
+<strong>Thursday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Friday:</strong> <time itemprop="opens" content="08:30:00">8:30 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
+<strong>Friday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
 </li>
 <li itemProp="dayOfWeek">
-<strong>Saturday:</strong> <time itemprop="opens" content="08:30:00">8:30 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
+<strong>Saturday:</strong> <time itemprop="opens" content="09:00:00">9:00 AM</time> - <time itemprop="closes" content="05:00:00">5:00 PM</time>
 </li>
 </ul>
-</div>
-<div class="col-md-12 col-sm-12 col-xs-12">
-<div class="ListingHikingDetails ListingDetails">
-<h3 data-text-inactive="<i class='fa fa-plus-circle'></i> Exceptions" data-text-active="<i class='fa fa-minus-circle'></i> Close Exceptions" data-aria-controls="collapsible-308-1833" data-class="ListingDetails-button" class="js-collapser" style="display: block;"><span style="border: 0px; clip: rect(0px 0px 0px 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Additional Information</span><button class="js-collapser-button ListingDetails-button" aria-expanded="false"><i class="fa fa-plus-circle"></i> View More</button></h3>
-<div class="row js-collapsible" id="collapsible-308-1833" aria-hidden="true" style="display: none;">
-<div class="content">
-<div class="ListingDetails-content col-sm-12 col-md-12">
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-12-25" />Christmas Day:<span itemprop="validThrough" content="2015-12-25" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-10-12" />Columbus Day:<span itemprop="validThrough" content="2015-10-12" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-01-19" />Birthday of Martin Luther King, Jr.:<span itemprop="validThrough" content="2015-01-19" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-01-01" />New Year’s Day:<span itemprop="validThrough" content="2015-01-01" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-02-16" />Washington’s Birthday:<span itemprop="validThrough" content="2015-02-16" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-11-26" />Thanksgiving Day:<span itemprop="validThrough" content="2015-11-26" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-11-11" />Veterans Day:<span itemprop="validThrough" content="2015-11-11" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-sm-12">
-<h4 class="SubSection" itemprop="name">Buffalo Point Visitor Contact Station</h3>
-<p itemprop="description">The Buffalo Point Ranger Station is located at the lower end of the river, about 14 miles south of Yellville, Arkansas off of Highway 268. This ranger station is located near the Buffalo Point Campground, the park's largest campground and only one that offers hookups. </p>
-</div>
-<div class="col-sm-12 HoursSection clearfix">
-<h4 class="HoursSection">Standard Hours</h4>
-<div class="col-md-6 col-sm-6 col-xs-12">
-<ul>
-<li itemProp="dayOfWeek">
-<strong>Sunday:</strong> <time itemprop="opens" content="08:00:00">8:00 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Monday:</strong> <time itemprop="opens" content="08:00:00">8:00 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Tuesday:</strong> <time itemprop="opens" content="08:00:00">8:00 PM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Wednesday:</strong> <time itemprop="opens" content="08:00:00">8:00 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Thursday:</strong> <time itemprop="opens" content="08:00:00">8:00 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Friday:</strong> <time itemprop="opens" content="08:00:00">8:00 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
-</li>
-<li itemProp="dayOfWeek">
-<strong>Saturday:</strong> <time itemprop="opens" content="08:00:00">8:00 AM</time> - <time itemprop="closes" content="04:30:00">4:30 PM</time>
-</li>
-</ul>
-</div>
-<div class="col-md-12 col-sm-12 col-xs-12">
-<div class="ListingHikingDetails ListingDetails">
-<h3 data-text-inactive="<i class='fa fa-plus-circle'></i> Exceptions" data-text-active="<i class='fa fa-minus-circle'></i> Close Exceptions" data-aria-controls="collapsible-1615-1838" data-class="ListingDetails-button" class="js-collapser" style="display: block;"><span style="border: 0px; clip: rect(0px 0px 0px 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Additional Information</span><button class="js-collapser-button ListingDetails-button" aria-expanded="false"><i class="fa fa-plus-circle"></i> View More</button></h3>
-<div class="row js-collapsible" id="collapsible-1615-1838" aria-hidden="true" style="display: none;">
-<div class="content">
-<div class="ListingDetails-content col-sm-12 col-md-12">
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-12-25" />Christmas Day:<span itemprop="validThrough" content="2015-12-25" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-10-12" />Columbus Day:<span itemprop="validThrough" content="2015-10-12" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-01-19" />Birthday of Martin Luther King, Jr.:<span itemprop="validThrough" content="2015-01-19" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-01-01" />New Year’s Day:<span itemprop="validThrough" content="2015-01-01" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-02-16" />Washington’s Birthday:<span itemprop="validThrough" content="2015-02-16" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-11-26" />Thanksgiving Day:<span itemprop="validThrough" content="2015-11-26" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-<div class="row ExceptionsContainer">
-<ul class="Exceptions">
-<li class="DateRange">
-<span itemprop="validFrom" content="2015-11-11" />Veterans Day:<span itemprop="validThrough" content="2015-11-11" />
-</li>
-<li><time itemprop="opens" content=""></time> - <time itemprop="closes" content=""></time></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1339,7 +1331,8 @@ GPS systems are not reliable in this area so please call ahead for directions or
 </div>
 <div class="row">
 <div class="col-sm-12">
-<p>Summer in the Ozarks can be very hot and humid. Please check the weather forecast prior to your arrival and plan accordingly. The weather the rest of the year has the potential to be wet and cool or dry and warm. Please pay special attention to river levels and the rain forecast when planning a trip on the river. River levels can rise dramatically in a short period of time so please be aware of conditions.  </p>
+<p>Summer: Keweenaw summers are usually mild, with average highs in the 70s, but can reach into the 80s and 90s. Nighttime temperatures are typically cool, but can also dip into the 40s or stay in the 70s. Summer months are dry, with occasional rain or severe thunderstorms.
+Winter: Again influenced by Lake Superior, winter temperatures are mild with highs in the 20s. Cold spells can occur with subzero temperatures. Lake effect snow is common, and 300 inches of snow can fall in a season.</p>
 </div>
 </div>
 </div>
@@ -1355,16 +1348,9 @@ GPS systems are not reliable in this area so please call ahead for directions or
 <div class="fees-passes-container" itemscope="" itemtype="http://schema.org/Offer">
 <h3 class="SubSection">Entrance Fees:</h3>
 <div class="entrance-fees">
-<div id="fee-1647">
-<p class="FeeTitle"><span itemprop="name">Entrance Fee</span> - <span itemprop="price">$0.00</span></p>
-<p><span itemprop="description">None</span></p>
-</div>
-</div>
-<h3 class="SubSection">Entrance Passes:</h3>
-<div class="entrance-passes">
-<div id="fee-1648">
-<p class="PassTitle"><span itemprop="name">Entrance Pass</span> - <span itemprop="price">$0.00</span></p>
-<p><span itemprop="description">None</span></p>
+<div id="fee-3202">
+<p class="FeeTitle"><span itemprop="name">No Entrance Fees</span> - <span itemprop="price">$0.00</span></p>
+<p><span itemprop="description">Keweenaw National Historical Park has no entrance fees. Exploring the Calumet Visitor Center is also free. Some of our Heritage Sites may charge a fee or request a donation. Contact a specific site for more information: http://www.nps.gov/kewe/learn/management/keweenaw-heritage-sites.htm </span></p>
 </div>
 </div>
 </div>
@@ -1379,13 +1365,9 @@ GPS systems are not reliable in this area so please call ahead for directions or
 <div class="panel-body">
 <div class="visitor-center-container">
 <div class="visitor-centers">
-<div id="visitor-center-2394">
-<span><a href="">Tyler Bend Visitor Center</a></span><br />
-<span><p>The Tyler Bend Visitor Center is located off of Highway 65 between St. Joe and Marshall, Arkansas. </p></span>
-</div>
-<div id="visitor-center-2395">
-<span><a href="">Buffalo Point Visitor Contact Station</a></span><br />
-<span><p>The Buffalo Point Visitor Contact Station is located at the lower end of the river, 14 miles south of Yellville.</p></span>
+<div id="visitor-center-1257">
+<span><a href="">Calumet Visitor Center</a></span><br />
+<span><p>The Calumet Visitor Center is located at 98 5th Street in downtown Calumet. Visitors can explore 3 floors of interactive exhibits, films and museum pieces focusing not only on mining history, but the social aspect as well. The Visitor Center is fully accessible and free of charge. Please note that the Visitor Center will be open as staffing allows. You may call (906) 337-3168 for the most current information.</p></span>
 </div>
 </div>
 </div>
@@ -1399,11 +1381,44 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 </div>
 </div>
 </div>
-<div id="cs_spacer_3427067" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
-<div id="cs_control_3427067" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
+<div id="cs_spacer_3411008" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3411008" class="cs_control  CS_Element_Custom"><div class="Component text-content-size text-content-style ArticleTextGroup">
+<figure class="-auto-width">
+<img
+alt="Quincy Mine ruins"
+title="Quincy Mine ruins"
+src="/kewe/planyourvisit/images/Ruins-with-Kit_1.jpg"
+>
+<figcaption>A ranger poses at the former Quincy Mine dryhouse. <p class="figcredit">NPS Photo</p></figcaption>
+</figure>
+</div></div>
+<div id="cs_spacer_3411000" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3411000" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
 <div class="Component text-content-size text-content-style ArticleTextGroup clearfix">
-<p>Access to Buffalo National River can be found at various points throughout the length of the river. Access roads may not be paved and in some cases are extremely rocky and may require a 4-wheel drive and/or high clearance vehicle. No road follows alongside the river as it floods on a regular basis.</p>
-<p>GPS can be very unreliable in this area. Such systems have sent numerous visitors in the wrong direction and onto dirt roads. Please refer to an Arkansas Highway map or park map.</p>
+<!--StartFragment-->
+<p style="font-family: arial, helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.999979019165px;"><span style="background-color: rgb(255, 255, 255);">Visiting Keweenaw National Historical Park is different from visiting many other national park sites across the country. The park was established to preserve and interpret the history of copper mining on the Keweenaw Peninsula through partnerships. The National Park Service works with a variety of organizations, including public and private entities, to achieve this goal.<br>
+<br>
+Most visitor services for Keweenaw National Historical Park, such as guided tours or museums, are provided by the park's partners known as <a id="https://www.nps.gov/kewe/parkmgmt/keweenaw-heritage-sites.htm|" href="https://www.nps.gov/kewe/parkmgmt/keweenaw-heritage-sites.htm" style="color: rgb(147, 106, 0); text-decoration: underline;">Keweenaw Heritage Sites</a>. These sites are not owned or operated by the National Park Service but park staff work with these sites to coordinate services and preservation efforts. For more information on the <a id="https://www.nps.gov/kewe/parkmgmt/keweenaw-heritage-sites.htm|" href="https://www.nps.gov/kewe/parkmgmt/keweenaw-heritage-sites.htm" style="color: rgb(147, 106, 0); text-decoration: underline;">Keweenaw Heritage Sites</a>, including hours of operation and fees, request a copy of the annual park newspaper or <a id="CP___PAGEID=3021876,/kewe/learn/news/newspaper.htm,23316" href="/kewe/learn/news/newspaper.htm" style="color: rgb(147, 106, 0); text-decoration: underline;">view it online here</a>.</span></p>
+<p style="font-family: arial, helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; line-height: 19.999979019165px;"><span style="background-color: rgb(255, 255, 255);">Keweenaw National Historical Park operates the <a id="https://www.nps.gov/kewe/photosmultimedia/calumet-visitor-center.htm|" href="https://www.nps.gov/kewe/photosmultimedia/calumet-visitor-center.htm">Calumet Visitor Center</a> in downtown Calumet, MI. This visitor center is open seasonally, for the most current operating hours please visit our <a id="CP___PAGEID=3418598,https://www.nps.gov/kewe/planyourvisit/hours.htm,22361|" href="https://www.nps.gov/kewe/planyourvisit/hours.htm">operating hours and seasons</a> page. Here you can experience three floors of interactive exhibits, films, and ranger talks. Please call ahead to confirm hours of operation, 906-337-3168.</span></p>
+<!--EndFragment-->
+</div></div>
+<div id="cs_spacer_3411002" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3411002" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style></div>
+<div id="cs_spacer_3412898" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3412898" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
+<div class="Component text-content-size text-content-style ArticleTextGroup clearfix">
+<figure class="-right">
+<img
+alt="Jeremiah and Kathleen next to snow covered CVC sign 2"
+title="Jeremiah and Kathleen next to snow covered CVC sign 2"
+src="/kewe/planyourvisit/images/Jeremiah-and-Kathleen-next-to-snow-covered-CVC-sign-2_1.jpg"
+>
+<figcaption><p class="figcredit">NPS Photo</p></figcaption>
+</figure><!-- floating-image alignment  -->
+<p><strong> Weather</strong></p>
+<p><u>Summer</u>: Surrounded by Lake Superior, Keweenaw summers are usually mild, with average highs in the 70s, but can reach into the 80 and 90s. Nighttime temperatures are typically cool, but can also dip into the 40s or stay in the 70s. Summer months are dry, with occasional rain or severe thunderstorms. </p>
+<p><u>Winter</u>: Again influenced by Lake Superior, winter temperatures are mild with highs in the 20s. Cold spells can occur with subzero temperatures. Lake effect snow is common,  and 300 inches of snow can fall in a season. Please plan accordingly as certain snowstorms can bring blizzard conditions, making travel hazardous. </p>
+<p><a id="http://forecast.weather.gov/MapClick.php?lat=47.24052674581378&amp;lon=-88.45019626474505&amp;site=all&amp;smap=1#.VFj3GfnF-QA|" href="http://forecast.weather.gov/MapClick.php?lat=47.24052674581378&amp;lon=-88.45019626474505&amp;site=all&amp;smap=1#.VFj3GfnF-QA">For the current forecast click here.</a></p>
 </div></div>
 </td></tr>
 </table></div>
@@ -1417,7 +1432,7 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <div class="ColumnMain col-sm-12">
 <div class="row">
 <div class="col-sm-12 text-content-size text-content-style">
-<p style="text-align:right;">Last updated: March 2, 2016</p>
+<p style="text-align:right;">Last updated: October 13, 2017</p>
 </div>
 </div>
 </div>
@@ -1430,28 +1445,27 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <div class="row">
 <div class="col-xs-12 col-sm-6">
 <div class="ParkFooter-contact">
-<h3><a href="/buff/contacts.htm" class="carrot-end">Contact the Park</a></h3>
+<h3><a href="/kewe/contacts.htm" class="carrot-end">Contact the Park</a></h3>
 <div class="vcard">
 <div class="mailing-address" itemscope itemtype="http://schema.org/Place">
 <h4 class="org">Mailing Address:</h4>
 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 <p class="adr">
 <span itemprop="streetAddress" class="street-address">
-402 N. Walnut Street
-<br>Suite 136
+25970 Red Jacket Road
 </span>
 <br>
-<span><span itemprop="addressLocality">Harrison</span>, <span itemprop="addressRegion" class="region">AR</span>
-<span itemprop="postalCode" class="postal-code">72601     </span>
+<span><span itemprop="addressLocality">Calumet</span>, <span itemprop="addressRegion" class="region">MI</span>
+<span itemprop="postalCode" class="postal-code">49913     </span>
 </span>
 </p>
 </div>
 </div>
 <h4>Phone:</h4>
 <p><span itemprop="telephone" class="tel">
-(870) 439-2502</span>
+(906) 337-3168</span>
 </p>
-<h4 class="ParkFooter-contactEmail"><a href="/buff/contacts.htm" class="carrot-end">Contact Us</a></h4>
+<h4 class="ParkFooter-contactEmail"><a href="/kewe/contacts.htm" class="carrot-end">Contact Us</a></h4>
 </div>
 </div>
 </div>
@@ -1462,13 +1476,13 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <h3>Tools</h3>
 <ul class="row">
 <li class="col-xs-6 col-sm-12">
-<a href="/buff/faqs.htm" ><i class="fa fa-question-circle"></i>FAQ</a>
+<a href="/kewe/faqs.htm" ><i class="fa fa-question-circle"></i>FAQ</a>
 </li>
 <li class="col-xs-6 col-sm-12">
-<a href="/buff/siteindex.htm" ><i class="fa fa-compass"></i>Site Index</a>
+<a href="/kewe/siteindex.htm" ><i class="fa fa-compass"></i>Site Index</a>
 </li>
 <li class="col-xs-6 col-sm-12">
-<a href="/buff/espanol/index.htm" ><i class="fa fa-comment-o"></i>Español</a>
+<a href="/kewe/espanol/index.htm" ><i class="fa fa-comment-o"></i>Español</a>
 </li>
 </ul>
 </div>
@@ -1479,13 +1493,13 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <h3>Stay Connected</h3>
 <ul class="ParkFooter-socialLinks row">
 <li class="col-xs-6 col-sm-12 col-md-6">
-<a href="http://www.facebook.com/buffnatlriver"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#facebook"></use></svg>Facebook</a>
+<a href="https://www.facebook.com/KeweenawNHP"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#facebook"></use></svg>Facebook</a>
 </li>
 <li class="col-xs-6 col-sm-12 col-md-6">
-<a href="http://twitter.com/BuffaloNPS"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#twitter"></use></svg>Twitter</a>
+<a href="http://www.twitter.com/KeweenawNPS"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#twitter"></use></svg>Twitter</a>
 </li>
 <li class="col-xs-6 col-sm-12 col-md-6">
-<a href="http://instagram.com/buffalorivernps"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#instagram-dark"></use></svg>Instagram</a>
+<a href="http://instagram.com/KeweenawNPS"><svg class="icon" focusable="false" role="img"><use xlink:href="/common/commonspot/templates/assetsCT/sprite.symbol.svg#instagram-dark"></use></svg>Instagram</a>
 </li>
 </ul>
 </div> <!-- ParkFooter-socialLinks -->
@@ -1508,7 +1522,7 @@ $("#BasicInfoAccordion .panel-collapse:first").collapse('show');
 <input class="GlobalSearch-input" type="text" autocomplete="off" id="site_search_footer" name="query" placeholder="Keyword Search">
 <button class="GlobalSearch-button GlobalSearch-submitButton btn-form btn-form-primary js-use-site-limit" type="submit">This Site</button>
 <button class="GlobalSearch-button GlobalSearch-secondaryButton btn-form btn-form-primary" type="submit">All NPS</button>
-<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/buff" />
+<input type="hidden" id="sitelimit" class="visuallyhidden" name="sitelimit" value="nps.gov/kewe" />
 </div>
 </form>
 </div>
@@ -1664,7 +1678,7 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 </html>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-ns.js"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
 <script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script>
@@ -1687,13 +1701,13 @@ if(!commonspot)
 commonspot.csPage = {};
 
 
-	commonspot.csPage.url = '/buff/planyourvisit/basicinfo.htm';
+	commonspot.csPage.url = '/kewe/planyourvisit/basicinfo.htm';
 
 
-commonspot.csPage.id = 3427061;
+commonspot.csPage.id = 3410219;
 
 commonspot.csPage.siteRoot = '/';
-commonspot.csPage.subsiteRoot = '/buff/planyourvisit/';
+commonspot.csPage.subsiteRoot = '/kewe/planyourvisit/';
 
 
 // -->

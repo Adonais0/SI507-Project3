@@ -51,7 +51,7 @@ class Part2(unittest.TestCase):
         self.assertTrue("le" in self.sample_inst)
         self.assertTrue("Yosemite" not in self.sample_inst)
 
-class Part3(unittest.TestCase)
+class Part3(unittest.TestCase):
 
     def setUp(self):
         pass
@@ -78,7 +78,7 @@ class Part4(unittest.TestCase):
     def test_csv_files_exist(self):
         self.assertTrue(self.ak.read())
         self.assertTrue(self.ca.read())
-        self.assertTrue(self.mi.read())
+        self.assertTrue(self.ak.read())
 
     def tearDown(self):
         self.ak.close()

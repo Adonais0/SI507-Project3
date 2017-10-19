@@ -213,33 +213,69 @@ class NationalSite1:
         return park_dict['mail_address']
     def __contain__(self,item):
         return item in self.name
-# However, to begin your investigation and begin to plan your class definition, you may want to open this file and create a BeautifulSoup instance of it to do investigation on.
 
-# Remember that there are things you'll have to be careful about listed in the instructions -- e.g. if no type of park/site/monument is listed in input, one of your instance variables should have a None value...
-#One park object
 def return_ls_pk_soup(soup):#return a list of park soups of one state page
-    list_of_parks = soup.find_all("li",{"class":"clearfix"})
+    list_of_lis = soup.find_all("li",{"class":"clearfix"})
     list_of_park_soup = []
-    for i in list_of_parks:
-        list_of_park_soup.append(i)
+    for li in list_of_lis:
+        li = str(li)
+        li_soup = BeautifulSoup(li,"html.parser")#i should be html text
+        list_of_park_soup.append(li_soup)
     return list_of_park_soup
 
+# markup = '<a href="http://example.com/">I linked to <i>example.com</i></a>'
+# soup = BeautifulSoup(markup,"html.parser")
+# print(soup)
+print(return_ls_pk_soup(mi_soup)[0])
+print(type(return_ls_pk_soup(mi_soup)[0]))
 class NationalSite:
     def __init__(self,soup):#take a soup representing one park as input
-        self.address_url = ((((soup.find('ul')).find_all('li'))[1]).find('a').get('href'))
-        self.address_data = requests.get(self.address_url).text
-        self.address_soup = BeautifulSoup(self.address_data, 'html.parser')
-        self.location = soup.find('h4').get('text','None')
-        self.name = soup.find('h3').get('text','None')
-        self.park_type = soup.find('h2').get('text','None')
-        self.description = soup.find("p")
-        self.address = ((self.address_soup.find('p', {'class': 'adr'})).find('span', {'class': 'street-address'})).text[2:-2] + '/' + ((self.address_soup.find('p', {'class': 'adr'})).find('span', {'itemprop': 'addressLocality'})).text + '/' + ((self.address_soup.find('p', {'class': 'adr'})).find('span', {'class': 'region'})).text + '/' + ((self.address_soup.find('p', {'class': 'adr'})).find('span', {'class': 'postal-code'})).text  # ((('span',{'itemprop':'streetAddress'}).text)[2:-2]+'/'+(address_soup.find('span',{'itemprop':'addressLocality'}).text)+'/'+(address_soup.find('span',{'itemprop':'addressRegion'}).text)+'/'+(address_soup.find('span',{'itemprop':'postalCode'}).text))
+        if soup.find('ul'):
+            self.address_url = ((((soup.find('ul')).find_all('li'))[1]).find('a').get('href'))
+            self.address_data = requests.get(self.address_url).text
+            self.address_soup = BeautifulSoup(self.address_data, 'html.parser')
+            if ((self.address_soup.find('p', {'class': 'adr'})).find('span', {'class': 'street-address'})) and (
+            (self.address_soup.find('p', {'class': 'adr'})).find('span', {'itemprop': 'addressLocality'})) and (
+            (self.address_soup.find('p', {'class': 'adr'})).find('span', {'class': 'region'})) and (
+            (self.address_soup.find('p', {'class': 'adr'})).find('span', {'class': 'postal-code'})):
+                self.address = ((self.address_soup.find('p', {'class': 'adr'})).find('span',
+                                                                                     {'class': 'street-address'})).text[
+                               2:-2] + '/' + ((self.address_soup.find('p', {'class': 'adr'})).find('span', {
+                    'itemprop': 'addressLocality'})).text + '/' + (
+                               (self.address_soup.find('p', {'class': 'adr'})).find('span',
+                                                                                    {'class': 'region'})).text + '/' + (
+                               (self.address_soup.find('p', {'class': 'adr'})).find('span',
+                                                                                    {'class': 'postal-code'})).text
+            else:
+                self.address = None
 
+        else:
+            self.address_url =None
+            self.address_data = None
+            self.address_soup = None
+            self.address = None
+        if soup.find('h4'):
+            self.location = soup.find('h4').text
+        else:
+            self.location = "None"
+        if soup.find('h3'):
+            self.name = soup.find('h3').text
+        else:
+            self.name = "None"
+        if soup.find('h2'):
+            self.park_type = soup.find('h2').text#AssertionError: 'None | None' != 'Isle Royale | Houghton, MI'
+        else:
+            self.park_type = "None"
+        if soup.find('p'):
+            self.description = soup.find("p").text
+        else:
+            self.description = "None"
+        self.type = None
     def __str__(self):
         return str(self.name+" | "+self.location)
     def get_mailing_address(self):
-        return park_dict['mail_address']
-    def __contain__(self,item):
+        return self.address #NameError: name 'park_dict' is not defined
+    def __contains__(self, item):#TypeError: argument of type 'NationalSite' is not iterable
         return item in self.name
 
 
@@ -262,15 +298,16 @@ print(10*"*"+"Part_3"+10*"*")
 # Create lists of NationalSite objects for each state's parks.
 
 # HINT: Get a Python list of all the HTML BeautifulSoup instances that represent each park, for each state.
-california_natl_sites = return_ls_pk_soup(ca_soup)#list of park instances
-arkansas_natl_sites = return_ls_pk_soup(ar_soup)
-michigan_natl_sites = return_ls_pk_soup(mi_soup)
-for i in return_park_list(ca_soup):#i is a dictionary
-    california_natl_sites.append(NationalSite1(i))
-for i in return_park_list(ar_soup):#i is a dictionary
-    arkansas_natl_sites.append(NationalSite1(i))
-for i in return_park_list(mi_soup):#i is a dictionary
-    michigan_natl_sites.append(NationalSite1(i))
+california_natl_sites = []
+michigan_natl_sites = []
+arkansas_natl_sites = []
+for park_soup in return_ls_pk_soup(ca_soup):
+  california_natl_sites.append(NationalSite(park_soup))#list of NtionalSite instances
+print(type(california_natl_sites[0]))
+for park_soup in return_ls_pk_soup(mi_soup):
+    michigan_natl_sites.append(NationalSite(park_soup))
+for park_soup in return_ls_pk_soup(ar_soup):
+    arkansas_natl_sites.append(NationalSite(park_soup))
 
 ##Code to help you test these out:
 for p in california_natl_sites:
